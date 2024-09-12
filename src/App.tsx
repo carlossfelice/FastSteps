@@ -1,15 +1,13 @@
-
-import {Header}from './components/Header'
-
+import { Header } from "./components/Header";
+import Home from "./components/Home";
 
 function App() {
-
-
   return (
     <>
-      <Header/>
+      <Header />
+      <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
