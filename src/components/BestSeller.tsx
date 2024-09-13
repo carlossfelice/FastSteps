@@ -93,7 +93,9 @@ const BestSeller = () => {
   return (
     <div className="bg-gray-100 py-16">
       <div className="max-w-8xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-left">Best Sellers</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center bg-gray-300">
+          Best Sellers
+        </h2>
         <div
           ref={scrollRef}
           className="flex space-x-6 overflow-x-scroll scrollbar-hide"
