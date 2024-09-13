@@ -1,6 +1,11 @@
+import BestSeller from "./BestSeller";
+import Categories from "./Categories";
+import Featured from "./Featured";
+import Footer from "./Footer";
+
 const Home = () => {
   return (
-    <div className="bg-gray-100 text-center">
+    <div className="bg-gray-100 text-center min-h-screen flex flex-col">
       <div
         className="relative bg-cover bg-center h-[85vh]"
         style={{
@@ -21,6 +26,13 @@ const Home = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div>
+      
+        <BestSeller />
+        <Categories />
+        <Featured />
+        <Footer />
       </div>
     </div>
   );
