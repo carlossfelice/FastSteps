@@ -1,7 +1,6 @@
 const Home = () => {
   return (
     <div className="bg-gray-100 text-center">
-      {/* Hero Section */}
       <div
         className="relative bg-cover bg-center h-[85vh]"
         style={{
