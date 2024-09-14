@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MiniBannerCarousel from "./MiniBannerCarousel";
+import Footer from "./Footer";
 
 const products = [
   {
@@ -480,6 +481,9 @@ const WomenCatalog = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
