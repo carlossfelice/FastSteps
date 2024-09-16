@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import WomenCatalog from "./components/WomenCatalog"; 
-import MenCatalog from "./components/MenCatalog"; 
-import KidsCatalog from "./components/KidsCatalog"; 
-import About from "./components/About"; 
+import WomenCatalog from "./components/WomenCatalog";
+import MenCatalog from "./components/MenCatalog";
+import KidsCatalog from "./components/KidsCatalog";
+import About from "./components/About";
 import { Navbar } from "./components/Navbar";
 import Cart from "./components/Cart";
 import Profile from "./components/Profile";
@@ -21,7 +21,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path="/Profile" element={<Profile />} />
-
         </Routes>
       </div>
     </Router>
