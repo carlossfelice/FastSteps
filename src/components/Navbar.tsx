@@ -7,7 +7,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState("");
-  const [darkMode, setDarkMode] = useState(false); // Estado para el modo oscuro
+  const [darkMode, setDarkMode] = useState(false); // Dark mode state
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -31,7 +31,7 @@ export const Navbar = () => {
       <div className="flex items-center flex-grow relative">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 z-50">
-          <img src={logo} alt="Logo" className="h-24 rounded-lg" />
+          <img src={logo} alt="Logo" className="h-24 rounded-lg " />
         </Link>
 
         {/* Hamburger Icon on Small Screens */}
@@ -50,22 +50,84 @@ export const Navbar = () => {
           {['/', '/Women', '/Men', '/Children', '/About'].map((path, index) => (
             <li
               key={index}
-              className="relative border-b sm:border-none group"
+              className="relative group"
               onMouseEnter={() => handleMouseEnter(['/', '/Women', '/Men', '/Children', '/About'][index])}
               onMouseLeave={handleMouseLeave}
             >
               <Link
                 to={path}
-                className={`block px-4 py-2 sm:px-2 sm:py-1 relative ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:${darkMode ? 'text-gray-100' : 'text-black'}`}
+                className={`block px-4 py-2 sm:px-2 sm:py-1 ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:${darkMode ? 'text-gray-100' : 'text-black'} transition-colors`}
               >
                 {['Home', 'Women', 'Men', 'Children', 'About Us'][index]}
                 <span className="absolute left-0 bottom-0 w-full h-0.5 bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
               </Link>
               {/* Dropdown Menu */}
               {dropdownOpen === path && (
-                <div className={`absolute left-0 top-full ${darkMode ? 'bg-gray-700' : 'bg-white'} shadow-lg w-48 sm:w-64 z-50`}>
-                  <ul className={`${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                    {/* Dropdown items as before */}
+                <div className={`absolute left-0 top-full mt-1 ${darkMode ? 'bg-gray-700 text-gray-200' : 'bg-white text-gray-800'} shadow-lg rounded-lg w-48 sm:w-64 z-50`}>
+                  <ul className="space-y-2 p-2">
+                    {/* Dropdown items */}
+                    {path === '/' && (
+                      <>
+                        <li><Link to="/featured" className="block px-4 py-2 hover:bg-gray-200 rounded">Featured</Link></li>
+                        <li><Link to="/men" className="block px-4 py-2 hover:bg-gray-200 rounded">View All Men</Link></li>
+                        <li><Link to="/new-arrivals" className="block px-4 py-2 hover:bg-gray-200 rounded">New Arrivals</Link></li>
+                        <li><Link to="/best-sellers" className="block px-4 py-2 hover:bg-gray-200 rounded">Best Sellers</Link></li>
+                        <li><Link to="/footwear" className="block px-4 py-2 hover:bg-gray-200 rounded">Footwear Up to $150,000</Link></li>
+                        <li><Link to="/most-searched" className="block px-4 py-2 hover:bg-gray-200 rounded">Most Searched</Link></li>
+                        <li><Link to="/icons" className="block px-4 py-2 hover:bg-gray-200 rounded">Icons</Link></li>
+                      </>
+                    )}
+                    {path === '/Women' && (
+                      <>
+                        <li><Link to="/womens-footwear" className="block px-4 py-2 hover:bg-gray-200 rounded">All Women’s Footwear</Link></li>
+                        <li><Link to="/women-jordan" className="block px-4 py-2 hover:bg-gray-200 rounded">Jordan</Link></li>
+                        <li><Link to="/women-airmax" className="block px-4 py-2 hover:bg-gray-200 rounded">Air Max</Link></li>
+                        <li><Link to="/women-airforce" className="block px-4 py-2 hover:bg-gray-200 rounded">Air Force 1</Link></li>
+                        <li><Link to="/women-dunk" className="block px-4 py-2 hover:bg-gray-200 rounded">Dunk</Link></li>
+                        <li><Link to="/women-boots" className="block px-4 py-2 hover:bg-gray-200 rounded">Boots</Link></li>
+                        <li><Link to="/women-running" className="block px-4 py-2 hover:bg-gray-200 rounded">Running</Link></li>
+                        <li><Link to="/women-gym" className="block px-4 py-2 hover:bg-gray-200 rounded">Gym & Training</Link></li>
+                        <li><Link to="/women-nike-sb" className="block px-4 py-2 hover:bg-gray-200 rounded">Nike SB</Link></li>
+                        <li><Link to="/women-opportunities" className="block px-4 py-2 hover:bg-gray-200 rounded">Footwear Opportunities</Link></li>
+                      </>
+                    )}
+                    {path === '/Men' && (
+                      <>
+                        <li><Link to="/mens-footwear" className="block px-4 py-2 hover:bg-gray-200 rounded">All Men’s Footwear</Link></li>
+                        <li><Link to="/men-jordan" className="block px-4 py-2 hover:bg-gray-200 rounded">Jordan</Link></li>
+                        <li><Link to="/men-airmax" className="block px-4 py-2 hover:bg-gray-200 rounded">Air Max</Link></li>
+                        <li><Link to="/men-airforce" className="block px-4 py-2 hover:bg-gray-200 rounded">Air Force 1</Link></li>
+                        <li><Link to="/men-dunk" className="block px-4 py-2 hover:bg-gray-200 rounded">Dunk</Link></li>
+                        <li><Link to="/men-boots" className="block px-4 py-2 hover:bg-gray-200 rounded">Boots</Link></li>
+                        <li><Link to="/men-running" className="block px-4 py-2 hover:bg-gray-200 rounded">Running</Link></li>
+                        <li><Link to="/men-gym" className="block px-4 py-2 hover:bg-gray-200 rounded">Gym & Training</Link></li>
+                        <li><Link to="/men-nike-sb" className="block px-4 py-2 hover:bg-gray-200 rounded">Nike SB</Link></li>
+                        <li><Link to="/men-opportunities" className="block px-4 py-2 hover:bg-gray-200 rounded">Footwear Opportunities</Link></li>
+                      </>
+                    )}
+                    {path === '/Children' && (
+                      <>
+                        <li><Link to="/children-footwear" className="block px-4 py-2 hover:bg-gray-200 rounded">All Children’s Footwear</Link></li>
+                        <li><Link to="/children-jordan" className="block px-4 py-2 hover:bg-gray-200 rounded">Jordan</Link></li>
+                        <li><Link to="/children-airmax" className="block px-4 py-2 hover:bg-gray-200 rounded">Air Max</Link></li>
+                        <li><Link to="/children-airforce" className="block px-4 py-2 hover:bg-gray-200 rounded">Air Force 1</Link></li>
+                        <li><Link to="/children-dunk" className="block px-4 py-2 hover:bg-gray-200 rounded">Dunk</Link></li>
+                        <li><Link to="/children-boots" className="block px-4 py-2 hover:bg-gray-200 rounded">Boots</Link></li>
+                        <li><Link to="/children-running" className="block px-4 py-2 hover:bg-gray-200 rounded">Running</Link></li>
+                        <li><Link to="/children-gym" className="block px-4 py-2 hover:bg-gray-200 rounded">Gym & Training</Link></li>
+                        <li><Link to="/children-nike-sb" className="block px-4 py-2 hover:bg-gray-200 rounded">Nike SB</Link></li>
+                        <li><Link to="/children-opportunities" className="block px-4 py-2 hover:bg-gray-200 rounded">Footwear Opportunities</Link></li>
+                      </>
+                    )}
+                    {path === '/About' && (
+                      <>
+                        <li><Link to="/our-story" className="block px-4 py-2 hover:bg-gray-200 rounded">Our Story</Link></li>
+                        <li><Link to="/team" className="block px-4 py-2 hover:bg-gray-200 rounded">Our Team</Link></li>
+                        <li><Link to="/careers" className="block px-4 py-2 hover:bg-gray-200 rounded">Careers</Link></li>
+                        <li><Link to="/contact" className="block px-4 py-2 hover:bg-gray-200 rounded">Contact</Link></li>
+                        <li><Link to="/faqs" className="block px-4 py-2 hover:bg-gray-200 rounded">FAQs</Link></li>
+                      </>
+                    )}
                   </ul>
                 </div>
               )}
@@ -89,7 +151,7 @@ export const Navbar = () => {
         </div>
 
         {/* Search Icon on Small Screens */}
-        <button className={`hidden ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:text-gray-600 transition-colors text-lg`}>
+        <button className={`shidden ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:text-gray-600 transition-colors text-lg`}>
           <FaSearch />
         </button>
 
