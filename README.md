@@ -1,50 +1,20 @@
-# React + TypeScript + Vite
+# FastSteps 🏃‍♂️👟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**FastSteps** is an online sneaker store (eCommerce) built with Vite, React, and Tailwind CSS. The goal of this project is to provide a modern and efficient shopping experience for sneaker enthusiasts.
 
-Currently, two official plugins are available:
+## Features ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern User Interface**: Designed with React and Tailwind CSS for a smooth and attractive user experience.
+- **Product Catalog**: Displays a variety of sneakers organized by categories, allowing users to easily browse.
+- **Intuitive Navigation**: Effortlessly navigate between different sections of the website, including Women, Men, Kids, and more.
+- **Shopping Cart**: Users can add products to their cart, review them, and proceed to checkout.
+- **User Profile**: Users can manage their personal information and view their purchase history.
+- **Advanced Search**: Facilitates the search for specific products using filters and keywords.
 
-## Expanding the ESLint configuration
+## Technologies Used 🛠️
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Vite**: A fast build tool and development server for React, offering an agile and efficient development environment.
+- **React**: A JavaScript library for building interactive and dynamic user interfaces.
+- **Tailwind CSS**: A utility-first framework for designing websites quickly with a focus on customization and efficiency.
+- **React Router**: Manages navigation between different views and pages within the application.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
