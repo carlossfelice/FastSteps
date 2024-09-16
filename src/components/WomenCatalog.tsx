@@ -1,6 +1,5 @@
 import { useState } from "react";
 import MiniBannerCarousel from "./MiniBannerCarousel";
-
 const products = [
   {
     id: 1,

@@ -1,3 +1,4 @@
+import logo from "../assets/FS-logo10.jpg";
 const Footer = () => {
   return (
     <footer className="bg-gray-300 py-10">
@@ -5,9 +6,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img
-              src="/src/assets/FS-logo5.png"
+              src={logo}
               alt="Logo"
-              className="w-40 mb-4"
+              className="w-40 mb-4 h-24 rounded-lg"
             />
             <p className="text-gray-700">The Comfort Technology Company.</p>
           </div>
