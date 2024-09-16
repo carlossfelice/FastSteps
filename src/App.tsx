@@ -5,6 +5,7 @@ import MenCatalog from "./components/MenCatalog"; // Asegúrate de tener este co
 import KidsCatalog from "./components/KidsCatalog"; // Asegúrate de tener este componente
 import About from "./components/About"; // Asegúrate de tener este componente        // Navbar con el logo
 import { Navbar } from "./components/Navbar";
+import ProductDetail from "./components/ProductDetail";
 // import { Header } from './components/Header';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/women" element={<WomenCatalog />} />
+          <Route path="/product/:productId" element={<ProductDetail />} />
           <Route path="/Men" element={<MenCatalog />} />
           <Route path="/children" element={<KidsCatalog />} />
           <Route path="/about" element={<About />} />

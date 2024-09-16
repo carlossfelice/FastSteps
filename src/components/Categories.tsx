@@ -4,14 +4,14 @@ const categories = [
     name: "Shop Mujer",
     imageUrl:
       "https://skechers.com.ar/cdn/shop/files/SHOP_MUJER_1.png?v=1719575156&width=550",
-    link: "/shop-mujer",
+    link: "/Women",
   },
   {
     id: 2,
     name: "Shop Hombre",
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI75N0MU3v8CY3KilS3kBXTaqTmjiE63Af7g&s",
-    link: "/shop-hombre",
+    link: "/Men",
   },
   {
     id: 3,
