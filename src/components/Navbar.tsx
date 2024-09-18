@@ -150,10 +150,6 @@ export const Navbar = () => {
           <FaSearch className={`absolute right-3 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`} />
         </div>
 
-        {/* Search Icon on Small Screens */}
-        <button className={`shidden ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:text-gray-600 transition-colors text-lg`}>
-          <FaSearch />
-        </button>
 
         {/* Cart Icon */}
         <Link to="/cart" className={`hidden sm:block text-xl ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:text-gray-600 transition-colors`}>
@@ -166,7 +162,7 @@ export const Navbar = () => {
         </Link>
 
         {/* Profile Icon */}
-        <Link to="/profile" className={`text-xl ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:text-gray-600 transition-colors`}>
+        <Link to="/Profile" className={`text-xl ${darkMode ? 'text-gray-200' : 'text-gray-800'} hover:text-gray-600 transition-colors`}>
           <FaUser />
         </Link>
 
