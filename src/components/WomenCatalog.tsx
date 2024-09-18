@@ -1,8 +1,8 @@
 import { useState } from "react";
-import MiniBannerCarousel from "./MiniBannerCarousel";
-import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import MiniBannerCarousel from "./MiniBannerCarousel";
 import { products } from "./Product";
+import Footer from "./Footer";
 
 interface FilterSectionProps {
   title: string;
