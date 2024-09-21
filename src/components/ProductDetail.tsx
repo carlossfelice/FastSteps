@@ -29,7 +29,7 @@ const ProductDetail = () => {
     imageUrl: string;
     sizes: number[];
     shippingInfo: string;
-    paymentMethods: string;
+    paymentMethods?: string;
   }
 
   const addToCart = (product: Product, size: number | null) => {
