@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import MiniBannerCarousel from "./MiniBannerCarousel";
-import { products } from "./Product";
+import { womenProducts } from "./Product";
 import Footer from "./Footer";
+
+const currentProducts = womenProducts;
 
 interface FilterSectionProps {
   title: string;
@@ -217,7 +219,7 @@ const WomenCatalog = () => {
         <div className="w-3/4">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
           <div className="grid grid-cols-3 gap-4">
-            {products.map((product) => (
+            {currentProducts.map((product) => (
               <Link to={`/product/${product.id}`} key={product.id}>
                 <div className="bg-white shadow-lg rounded-lg p-4">
                   <img

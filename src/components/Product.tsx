@@ -1,4 +1,4 @@
-export const products = [
+export const womenProducts = [
   {
     id: 1,
     name: "Air Jordan 1 Low Black/Gorge Green",
@@ -268,13 +268,13 @@ export const products = [
     name: "Footwear and Something else",
     imageUrl:
       "https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/0b150bee-b8d4-40ca-8365-9f076f232b43___b49b979c4a07b7d81e406a228f22869f.jpg",
-    price: "$",
+    price: "$not available",
     new: true,
     category: "Clothing",
     description: "",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
-    paymentMethods: "",
+    paymentMethods: "not available",
     images: [
       "https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/0b150bee-b8d4-40ca-8365-9f076f232b43___b49b979c4a07b7d81e406a228f22869f.jpg",
       "https://nikearprod.vtexassets.com/arquivos/ids/629728-1000-1000?v=638210601968670000&width=1000&height=1000&aspect=true",
@@ -313,7 +313,8 @@ export const products = [
     price: "$125",
     new: true,
     category: "Accessories",
-    description: "",
+    description:
+      "Low-profile shell is lightweight and durable, Soft, perforated foam helps cushion impacts Elastic sleeves keep guards in place and use Dri-FIT technology to wick away perspiration.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
