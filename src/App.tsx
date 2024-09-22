@@ -18,6 +18,8 @@ import BankPromotionsModal from "./components/BankPromotionsModal";
 import WomenFiftyOff from "./components/WomenFiftyOff";
 import WomenFreeShipping from "./components/WomenFreeShipping";
 
+import { initMercadoPago } from '@mercadopago/sdk-react';
+initMercadoPago("APP_USR-ffed56d9-b519-4ac2-abb4-858eb52841f8");
 function App() {
   return (
     <Provider store={store}>
