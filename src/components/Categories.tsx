@@ -1,24 +1,24 @@
 const categories = [
   {
     id: 1,
-    name: "Shop Mujer",
+    name: "Shop Women",
     imageUrl:
       "https://skechers.com.ar/cdn/shop/files/SHOP_MUJER_1.png?v=1719575156&width=550",
     link: "/Women",
   },
   {
     id: 2,
-    name: "Shop Hombre",
+    name: "Shop Men",
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI75N0MU3v8CY3KilS3kBXTaqTmjiE63Af7g&s",
     link: "/Men",
   },
   {
     id: 3,
-    name: "Shop Niños Próximamente",
+    name: "Shop Children",
     imageUrl:
       "https://skechers.com.ar/cdn/shop/files/KIDS.png?v=1719575155&width=550",
-    link: "/shop-ninos",
+    link: "/children",
   },
 ];
 

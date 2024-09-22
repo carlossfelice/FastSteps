@@ -1,16 +1,16 @@
-export const products = [
+export const womenProducts = [
   {
     id: 1,
     name: "Air Jordan 1 Low Black/Gorge Green",
     imageUrl:
       "https://nikearprod.vtexassets.com/arquivos/ids/981341-1000-1000?v=638555457858370000&width=1000&height=1000&aspect=true",
-    price: "$120",
+    price: "$260",
     new: true,
     category: "Footwear",
     description:
       "Versatile comfort with flexible cushioning. Take on new challenges on the pavement. Lace up the 100% recycled laces and set the pace at the start of your running experience with the soft feel of the Nike Revolution 6.",
     shippingInfo:
-      "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
+      "Free Shipping We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago.",
     images: [
       "https://nikearprod.vtexassets.com/arquivos/ids/981341-1000-1000?v=638555457858370000&width=1000&height=1000&aspect=true",
@@ -31,7 +31,7 @@ export const products = [
     new: true,
     category: "Clothing",
     description:
-      "Adjustable Support - Get the perfect fit with sturdy straps that easily adjust in the back. Hook-and-eye closure helps make changing the fit or taking off your bra the hardest part of your workout.",
+      "Adjustable Support -   0-50% Get the perfect fit with sturdy straps that easily adjust in the back. Hook-and-eye closure helps make changing the fit or taking off your bra the hardest part of your workout.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -253,7 +253,7 @@ export const products = [
     new: true,
     category: "Accessories",
     description:
-      "Bam! Bam! Bam! Bam! The only formula for greatness is hard work, dedication and discipline. Start your journey with the Nike Everyday Playground 8P Basketball, the perfect outdoor ball for everyone.",
+      "Bam! Bam! Bam! Bam!  0-50% The only formula for greatness is hard work, dedication and discipline. Start your journey with the Nike Everyday Playground 8P Basketball, the perfect outdoor ball for everyone.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -268,13 +268,13 @@ export const products = [
     name: "Footwear and Something else",
     imageUrl:
       "https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/0b150bee-b8d4-40ca-8365-9f076f232b43___b49b979c4a07b7d81e406a228f22869f.jpg",
-    price: "$",
+    price: "$not available",
     new: true,
     category: "Clothing",
-    description: "",
+    description: " 0-50%",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
-    paymentMethods: "",
+    paymentMethods: "not available",
     images: [
       "https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/0b150bee-b8d4-40ca-8365-9f076f232b43___b49b979c4a07b7d81e406a228f22869f.jpg",
       "https://nikearprod.vtexassets.com/arquivos/ids/629728-1000-1000?v=638210601968670000&width=1000&height=1000&aspect=true",
@@ -310,12 +310,13 @@ export const products = [
     name: "Nike Mercurial Hardshell",
     imageUrl:
       "https://nikearprod.vtexassets.com/arquivos/ids/981766-1000-1000?v=638555464731970000&width=1000&height=1000&aspect=true",
-    price: "$125",
+    price: "$255",
     new: true,
     category: "Accessories",
-    description: "",
+    description:
+      "Low-profile shell is lightweight and durable, Soft, Free Shipping,  perforated foam helps cushion impacts Elastic sleeves keep guards in place and use Dri-FIT technology to wick away perspiration.",
     shippingInfo:
-      "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
+      " Free Shipping, We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
     images: [
       "https://nikearprod.vtexassets.com/arquivos/ids/981766-1000-1000?v=638555464731970000&width=1000&height=1000&aspect=true",
@@ -333,7 +334,7 @@ export const products = [
     new: true,
     category: "Clothing",
     description:
-      "Designed to reduce rolling, bunching and slipping, the extra-wide waistband helps keep you supported and smooth at the waist. Nike Dri-FIT technology wicks sweat away from your skin for faster evaporation, helping you stay dry and comfortable.",
+      "Designed to reduce rolling,  0-50%  bunching and slipping, the extra-wide waistband helps keep you supported and smooth at the waist. Nike Dri-FIT technology wicks sweat away from your skin for faster evaporation, helping you stay dry and comfortable.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -354,7 +355,7 @@ export const products = [
     new: true,
     category: "Clothing",
     description:
-      "Wherever your path takes you, this easy-fitting, sweat-wicking tee is designed to help keep you dry and comfortable. Yes, you read that right - the double Swoosh graphic mimics your movements to inspire you to keep going.",
+      "Wherever your path takes you, this easy-fitting,  0-50% sweat-wicking tee is designed to help keep you dry and comfortable. Yes, you read that right - the double Swoosh graphic mimics your movements to inspire you to keep going.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -377,7 +378,7 @@ export const products = [
     description:
       "From the durable stitching to the sleek materials and cupsole design, this shoe offers a durable style that's softer than a glass backboard. Originally designed for high-performance basketball, Nike Air cushioning delivers long-lasting comfort.",
     shippingInfo:
-      "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
+      "Free Shipping, We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
     images: [
       "https://nikearprod.vtexassets.com/arquivos/ids/997421-1000-1000?v=638556572186600000&width=1000&height=1000&aspect=true",
@@ -394,13 +395,13 @@ export const products = [
     name: "Nike Epic Fast",
     imageUrl:
       "https://nikearprod.vtexassets.com/arquivos/ids/1047670-1000-1000?v=638596753302100000&width=1000&height=1000&aspect=true",
-    price: "$229",
+    price: "$290",
     new: true,
     category: "Clothing",
     description:
-      "Nike Power fabric provides a wide range of stretch and support so you can overcome any demands of your training.",
+      "Nike Power fabric provides a wide range of stretch and support so you can overcome any demands of your training.Free Shipping",
     shippingInfo:
-      "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
+      "Free Shipping, We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
     images: [
       "https://nikearprod.vtexassets.com/arquivos/ids/1047666-800-800?width=800&height=800&aspect=true",
@@ -442,7 +443,7 @@ export const products = [
     new: true,
     category: "Accessories",
     description:
-      "Low profile design protects legs from abrasion. Durable shell is sewn to dense foam for shock absorption.",
+      "Low profile design protects legs from abrasion.  0-50% Durable shell is sewn to dense foam for shock absorption.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -460,7 +461,7 @@ export const products = [
     new: true,
     category: "Accessories",
     description:
-      "When you put on this cap, you're ready to fly. And you will with this dad cap's classic style and mid-depth design. The adjustable strap provides the ideal fit.",
+      "When you put on this cap, you're ready to fly.   0-50% And you will with this dad cap's classic style and mid-depth design. The adjustable strap provides the ideal fit.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -479,7 +480,7 @@ export const products = [
     new: true,
     category: "Clothing",
     description:
-      "The main compartment comes with a double zipper to offer secure and spacious storage space. Multiple easy-access pockets, including water bottle sleeves, offer convenient organization.",
+      "The main compartment comes with a double zipper to offer secure and spacious storage space.  0-50%  Multiple easy-access pockets, including water bottle sleeves, offer convenient organization.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -520,13 +521,13 @@ export const products = [
     name: "Nike One",
     imageUrl:
       "https://nikearprod.vtexassets.com/arquivos/ids/1047675-1000-1000?v=638596754217570000&width=1000&height=1000&aspect=true",
-    price: "$106",
+    price: "$269",
     new: true,
     category: "Footwear",
     description:
       "Opaque fabric and a high waist keep your butt area covered no matter how much you bend and stretch. Fewer seams provide a smooth, flattering fit. Plus, the waistband is mesh-lined for a stay-put design and added support.",
     shippingInfo:
-      "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
+      "Free Shipping,We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
     images: [
       "https://nikearprod.vtexassets.com/arquivos/ids/1047675-1000-1000?v=638596754217570000&width=1000&height=1000&aspect=true",
@@ -608,13 +609,13 @@ export const products = [
     name: "Nike Sportswear Phoenix Fleece",
     imageUrl:
       "https://nikearprod.vtexassets.com/arquivos/ids/1021914-800-800?width=800&height=800&aspect=true",
-    price: "$210",
+    price: "$260",
     new: true,
     category: "Clothing",
     description:
-      "Contrasting details and an oversized fit make this jacket a statement of style. Woven twill fabric provides a structured, durable feel that flexes with you for easy movement. Add dropped shoulders, elastic waistband, and fold-over collar for a complete retro, modernized feel.",
+      "Contrasting details and an oversized fit make this jacket a statement of style. Free Shipping, Woven twill fabric provides a structured, durable feel that flexes with you for easy movement. Add dropped shoulders, elastic waistband, and fold-over collar for a complete retro, modernized feel.",
     shippingInfo:
-      "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
+      "Free Shipping, We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
     images: [
       "https://nikearprod.vtexassets.com/arquivos/ids/1021914-800-800?width=800&height=800&aspect=true",
