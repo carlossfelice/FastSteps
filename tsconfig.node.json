@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2023"],
+    "lib": ["ES2023","DOM"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "jsx": "react-jsx", 
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -18,5 +19,10 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts" 
+, "src/components/Payment.js"  ]
 }

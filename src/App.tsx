@@ -15,6 +15,8 @@ import { store } from './components/store'; // Importa tu store de Redux
 import Login from "./components/Login";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import { initMercadoPago } from '@mercadopago/sdk-react';
+initMercadoPago("APP_USR-ffed56d9-b519-4ac2-abb4-858eb52841f8");
 function App() {
   return (
     <Provider store={store}> {/* Envuelve tu app con Provider de Redux */}
