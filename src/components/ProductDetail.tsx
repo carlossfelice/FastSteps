@@ -81,8 +81,8 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
   return (
     <div>
       <MiniBannerCarousel />
-      <div className="flex max-w-7xl mx-auto px-4 py-10">
-        <div className="w-1/2">
+      <div className="flex flex-col lg:flex-row  max-w-7xl mx-auto px-4 py-10">
+        <div className="w-full lg:w-1/2">
           {product && (
             <img
               src={selectedImage}
@@ -90,14 +90,14 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
               className="w-full h-100 object-cover rounded-lg"
             />
           )}
-          <div className="flex mt-4 space-x-2">
+          <div className="flex mt-4 space-x-2 overflow-x-auto">
             {product.images?.map((img, idx) => (
               <img
                 key={idx}
                 src={img}
                 alt={`Thumbnail ${idx}`}
                 onClick={() => setSelectedImage(img)}
-                className={`w-20 h-20 object-cover cursor-pointer ${
+                className={`w-20 h-20 object-cover cursor-pointer rounded-lg${
                   selectedImage === img ? "border-2 border-black" : ""
                 }`}
               />
@@ -105,7 +105,7 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
           </div>
         </div>
 
-        <div className="w-1/2 pl-10">
+        <div className="w-full lg:w-1/2 lg:pl-10 mt-6 lg:mt-10">
           <h2 className="text-3xl font-semibold">{product.name}</h2>
           <p className="text-gray-600 mt-4">{product.price}</p>
 
@@ -136,7 +136,7 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
           )}
 
           <button
-            className="mt-6 bg-black text-white py-3 px-6 rounded-full"
+            className="mt-6 bg-black text-white py-3 px-6 rounded-full w-full sm:w-auto"
             onClick={() => addToCart(product, selectedSize)}
             disabled={!selectedSize}
           >

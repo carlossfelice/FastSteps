@@ -66,8 +66,8 @@ const WomenCatalog = () => {
     <div>
       <MiniBannerCarousel />
 
-      <div className="flex max-w-7xl mx-auto px-4 py-10">
-        <div className="w-1/4 pr-6">
+      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-10">
+        <div className="w-full lg:w-1/4 pr-6">
           <h3 className="text-lg font-semibold mb-4">Filters</h3>
 
           <div className="mb-6">
@@ -216,9 +216,9 @@ const WomenCatalog = () => {
           />
         </div>
 
-        <div className="w-3/4">
+        <div className="w-full lg:w-3/4">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg-grid-cols-3 gap-4">
             {currentProducts.map((product) => (
               <Link to={`/women/product/${product.id}`} key={product.id}>
                 <div className="bg-white shadow-lg rounded-lg p-4">

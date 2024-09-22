@@ -14,6 +14,7 @@ import { Provider } from "react-redux"; // Importa el Provider de Redux
 import { store } from "./components/store"; // Importa tu store de Redux
 import Login from "./components/Login";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import BankPromotionsModal from "./components/BankPromotionsModal";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Router>
         <div>
           <Navbar />
+
           <Routes>
             <Route path="/" element={<Home />} />
 
@@ -49,6 +51,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
 
             <Route path="*" element={<NotFound />} />
+            <Route path="/bank-promotions" element={<BankPromotionsModal />} />
           </Routes>
         </div>
       </Router>

@@ -1,23 +1,24 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const banners = [
   {
     id: 1,
     text: "Up to 50% off on selected items",
     linkText: "See Products",
-    linkUrl: "/shop-mujer/50-off",
+    linkUrl: "/shop-women/50-off",
   },
   {
     id: 2,
     text: "Up to 9 insterest-free installments at Selected Banks",
     linkText: "See Bank Promotions",
-    linkUrl: "/promociones-bancarias",
+    linkUrl: "/bank-promotions",
   },
   {
     id: 3,
     text: "Free Shipping on Orders over 250",
     linkText: "See Products",
-    linkUrl: "/shop-mujer/envios-gratis",
+    linkUrl: "/shop-women/free-shipping",
   },
 ];
 
@@ -37,12 +38,12 @@ const MiniBannerCarousel = () => {
     <div className="bg-gray-200 py-3 text-center">
       <p className="text-gray-800">
         {banners[currentBanner].text}{" "}
-        <a
-          href={banners[currentBanner].linkUrl}
+        <Link
+          to={banners[currentBanner].linkUrl}
           className="text-blue-600 hover:underline"
         >
           {banners[currentBanner].linkText}
-        </a>
+        </Link>
       </p>
     </div>
   );
