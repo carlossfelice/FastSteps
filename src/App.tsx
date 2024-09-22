@@ -15,6 +15,8 @@ import { store } from "./components/store"; // Importa tu store de Redux
 import Login from "./components/Login";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import BankPromotionsModal from "./components/BankPromotionsModal";
+import WomenFiftyOff from "./components/WomenFiftyOff";
+import WomenFreeShipping from "./components/WomenFreeShipping";
 
 function App() {
   return (
@@ -49,9 +51,13 @@ function App() {
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
-
             <Route path="*" element={<NotFound />} />
             <Route path="/bank-promotions" element={<BankPromotionsModal />} />
+            <Route path="/shop-women/50-off" Component={WomenFiftyOff} />
+            <Route
+              path="/shop-women/free-shipping"
+              Component={WomenFreeShipping}
+            />
           </Routes>
         </div>
       </Router>

@@ -4,16 +4,32 @@
     margin: 20px;
   }
   
+  
   .open-modal-button {
     background-color: #5e5c5c;
+    background-image: url('https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/38055e71-5fdd-445d-b5d7-631f299d18c9___86728d5650dfe106a7900da33df99c73.png');
+    background-size:cover;
+    background-position:center;
     color: #fff;
     border: none;
-    padding: 50px 60px;
+    padding: 200px 100px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    transition: backgtound-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    display:flexbox;
+    justify-content: center;
+    align-items: center;
   }
+  .open-modal-button span {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  
 
   .open-modal-button:hover {
     background-color: #4a4a4a;
@@ -97,5 +113,21 @@
     width: 100px;
     height: auto;
     margin-bottom: 10px;
+  }
+  
+  .back-button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: -10vh;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #357abd;
   }
   
