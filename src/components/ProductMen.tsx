@@ -269,7 +269,7 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/1021655-800-800?width=800&height=800&aspect=true",
       "https://nikearprod.vtexassets.com/arquivos/ids/1021656-800-800?width=800&height=800&aspect=true",
       "https://nikearprod.vtexassets.com/arquivos/ids/1021657-800-800?width=800&height=800&aspect=true",
-      "ttps://nikearprod.vtexassets.com/arquivos/ids/1021658-800-800?width=800&height=800&aspect=true",
+      "https://nikearprod.vtexassets.com/arquivos/ids/1021658-800-800?width=800&height=800&aspect=true",
     ],
     sizes: [6, 6.5, 7.5, 8, 8.5, 9, 9.5],
   },

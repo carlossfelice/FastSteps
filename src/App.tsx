@@ -38,15 +38,16 @@ function App() {
               element={<ProductDetail section="men" />}
             />
             <Route path="/children" element={<KidsCatalog />} />
+            <Route
+              path="/children/product/:productId"
+              element={<ProductDetail section="children" />}
+            />
             <Route path="/about" element={<About />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
-            <Route
-              path="/product/:productId"
-              element={<ProductDetail section="women" />}
-            />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

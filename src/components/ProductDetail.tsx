@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { womenProducts } from "./Product";
 import { menProducts } from "./ProductMen";
+import { kidsProducts } from "./ProductKids";
 import Footer from "./Footer";
 import MiniBannerCarousel from "./MiniBannerCarousel";
 
@@ -19,23 +20,19 @@ interface Product {
   paymentMethods?: string;
 }
 
-type ProductArray = Product[];
-
 interface ProductDetailProps {
-  section: "women" | "men";
+  section: "women" | "men" | "children";
 }
 
-const getProductArray = (section: "women" | "men"): ProductArray => {
-  if (section === "men") {
-    return menProducts;
-  } else {
-    return womenProducts;
-  }
+const getProductArray = (section: "women" | "men" | "children"): Product[] => {
+  if (section === "men") return menProducts;
+  if (section === "women") return womenProducts;
+  if (section === "children") return kidsProducts;
+  return [];
 };
 
 const ProductDetail = ({ section }: ProductDetailProps) => {
   const { productId } = useParams<{ productId: string }>();
-
   const currentProducts = getProductArray(section);
 
   const product = currentProducts.find((p) => p.id === Number(productId));
@@ -72,7 +69,7 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
           Sorry, the product you are looking for is not available.
         </p>
         <a
-          href="/"
+          href="/Home"
           className="mt-6 inline-block bg-black text-white py-2 px-4 rounded-full"
         >
           Return to the store
@@ -170,6 +167,20 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
             )}
           </div>
         </div>
+      </div>
+
+      <div className="text-center mt-10">
+        <Link
+          to={`/${section}`}
+          className="inline-block bg-gray-600 text-white py-2 px-4 rounded-lg mb-4"
+        >
+          Return a{" "}
+          {section === "women"
+            ? "Women"
+            : section === "men"
+            ? "Men"
+            : "Children"}
+        </Link>
       </div>
       <Footer />
     </div>

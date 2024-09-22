@@ -220,7 +220,7 @@ const WomenCatalog = () => {
           <h3 className="text-lg font-semibold mb-4">Products</h3>
           <div className="grid grid-cols-3 gap-4">
             {currentProducts.map((product) => (
-              <Link to={`/product/${product.id}`} key={product.id}>
+              <Link to={`/women/product/${product.id}`} key={product.id}>
                 <div className="bg-white shadow-lg rounded-lg p-4">
                   <img
                     src={product.imageUrl}
