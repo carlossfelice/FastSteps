@@ -17,6 +17,9 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import BankPromotionsModal from "./components/BankPromotionsModal";
 import WomenFiftyOff from "./components/WomenFiftyOff";
 import WomenFreeShipping from "./components/WomenFreeShipping";
+import WomenTwentyOff from "./components/WomenTwentyOff";
+import WomenThirtyOff from "./components/WomenThirtyOff";
+import WomenFortyOff from "./components/WomenFortyOff";
 
 function App() {
   return (
@@ -58,6 +61,9 @@ function App() {
               path="/shop-women/free-shipping"
               Component={WomenFreeShipping}
             />
+            <Route path="/shop-mujer/20-off" element={<WomenTwentyOff />} />
+            <Route path="/shop-mujer/30-off" element={<WomenThirtyOff />} />
+            <Route path="/shop-mujer/40-off" element={<WomenFortyOff />} />
           </Routes>
         </div>
       </Router>
