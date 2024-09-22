@@ -449,7 +449,7 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/38055e71-5fdd-445d-b5d7-631f299d18c9___86728d5650dfe106a7900da33df99c73.png",
       "https://nikearprod.vtexassets.com/arquivos/ids/809119-1000-1000?v=638382403841900000&width=1000&height=1000&aspect=true",
       "https://nikearprod.vtexassets.com/arquivos/ids/878770-1000-1000?v=638467295162270000&width=1000&height=1000&aspect=true",
-      "hhttps://nikearprod.vtexassets.com/arquivos/ids/879157-1000-1000?v=638467300073530000&width=1000&height=1000&aspect=true",
+      "https://nikearprod.vtexassets.com/arquivos/ids/845311-1000-1000?v=638388487245870000&width=1000&height=1000&aspect=true",
       "https://nikearprod.vtexassets.com/arquivos/ids/813098-1000-1000?v=638382475950230000&width=1000&height=1000&aspect=true",
       "https://nikearprod.vtexassets.com/arquivos/ids/1037798-1000-1000?v=638588115427300000&width=1000&height=1000&aspect=true",
     ],
