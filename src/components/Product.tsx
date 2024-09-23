@@ -7,6 +7,9 @@ export const womenProducts = [
     price: "$260",
     new: true,
     category: "Footwear",
+    type: "Boots",
+    surface: "synthetic grass",
+
     description:
       "Versatile comfort with flexible cushioning. Take on new challenges on the pavement. Lace up the 100% recycled laces and set the pace at the start of your running experience with the soft feel of the Nike Revolution 6.",
     shippingInfo:
@@ -31,7 +34,7 @@ export const womenProducts = [
     new: true,
     category: "Clothing",
     description:
-      "Adjustable Support -   0-50% Get the perfect fit with sturdy straps that easily adjust in the back. Hook-and-eye closure helps make changing the fit or taking off your bra the hardest part of your workout.",
+      "Adjustable Support - 0-50% Get the perfect fit with sturdy straps that easily adjust in the back. Hook-and-eye closure helps make changing the fit or taking off your bra the hardest part of your workout.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -52,8 +55,9 @@ export const womenProducts = [
     price: "$95",
     new: true,
     category: "Clothing",
+    type: "Leggings",
     description:
-      "Nike Power fabric provides a wide range of stretch and support so you can overcome any demands of your training.",
+      "20% off Nike Power fabric provides a wide range of stretch and support so you can overcome any demands of your training.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -74,8 +78,10 @@ export const womenProducts = [
     price: "$100",
     new: true,
     category: "Footwear",
+    type: "Boots",
+    surface: "indoor court",
     description:
-      "When KD was a little boy, a pair of bright orange Air Maxes in his mother's closet caught his eye. When these sneakers didn't fit his still-small feet, his relentless work ethic was born: train, achieve legendary status, and one day have his own shoe line. The colors of this version pay homage to the pair that started it all.",
+      "When KD was a little boy, a pair of bright orange Air Maxes in his mother's closet caught his eye. 20% off When these sneakers didn't fit his still-small feet, his relentless work ethic was born: train, achieve legendary status, and one day have his own shoe line. The colors of this version pay homage to the pair that started it all.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods:
@@ -97,8 +103,9 @@ export const womenProducts = [
     price: "$140",
     new: true,
     category: "Clothing",
+    type: "Sweatshirts",
     description:
-      "Contrasting details and an oversized fit make this jacket a statement of style. Woven twill fabric provides a structured, durable feel that flexes with you for easy movement. Add dropped shoulders, elastic waistband, and fold-over collar for a complete retro, modernized feel.",
+      "Contrasting details and an oversized fit make this jacket a statement of style. 20% off Woven twill fabric provides a structured, durable feel that flexes with you for easy movement. Add dropped shoulders, elastic waistband, and fold-over collar for a complete retro, modernized feel.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -119,8 +126,9 @@ export const womenProducts = [
     price: "$105",
     new: true,
     category: "Clothing",
+    type: "Leggings",
     description:
-      "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
+      "We deliver nationwide. 30% off Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     images: [
@@ -140,9 +148,10 @@ export const womenProducts = [
     price: "$200",
     new: true,
     category: "Clothing",
-    description: "100% cotton Machine wash Imported",
+    type: "T-Shirts",
+    description: "100% cotton Machine wash Imported 30% off",
     shippingInfo:
-      "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
+      "We deliver nationwide. Check the estimated delivery date when you make your purchase.  You can return your order for any reason, free of charge, within a period of 30 days..",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
     images: [
       "https://nikearprod.vtexassets.com/arquivos/ids/996352-1000-1000?v=638556556666530000&width=1000&height=1000&aspect=true",
@@ -161,8 +170,9 @@ export const womenProducts = [
     price: "$175",
     new: true,
     category: "Footwear",
+    surface: "natural grass",
     description:
-      "The breathable upper mixes mesh and synthetic leather for a layered look that's built to last. Nike Air technology absorbs impact to provide cushioning with every step. Waffle pattern provides excellent traction.",
+      "The breathable upper mixes mesh and synthetic leather for a layered look that's built to last. 30% off Nike Air technology absorbs impact to provide cushioning with every step. Waffle pattern provides excellent traction.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -184,8 +194,9 @@ export const womenProducts = [
     price: "$195",
     new: true,
     category: "Footwear",
+    surface: "indoor court",
     description:
-      "For the first time in our history, Nike has developed an all-new Zoom Air unit. It sits in the sole and provides an extra level of springy feel underfoot that helps you move faster on the pitch and create separation when it matters most – whether you’re scoring goals, getting to the ball first or dribbling past defenders.",
+      "For the first time in our history, Nike has developed an all-new Zoom Air unit. 40% off It sits in the sole and provides an extra level of springy feel underfoot that helps you move faster on the pitch and create separation when it matters most – whether you’re scoring goals, getting to the ball first or dribbling past defenders.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -208,8 +219,9 @@ export const womenProducts = [
     price: "$186",
     new: true,
     category: "Clothing",
+    type: "Sweatshirts",
     description:
-      "Soft on the outside and made up of rows of tiny loops on the inside, this smooth fabric is a versatile option that you can wear all year round. Elastic hem and cuffs keep the sweatshirt in place.",
+      "Soft on the outside and made up of rows of tiny loops on the inside, this smooth fabric is a versatile option that you can wear all year round. Elastic hem and cuffs keep the sweatshirt in place. 40% off",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -231,7 +243,7 @@ export const womenProducts = [
     new: true,
     category: "Clothing",
     description:
-      "Nike Dri-FIT technology wicks sweat away from your skin for faster evaporation, helping you stay dry and comfortable. A keyhole-shaped back strap design encourages airflow.",
+      "Nike Dri-FIT technology wicks sweat away from your skin for faster evaporation, helping you stay dry and comfortable. 40% off A keyhole-shaped back strap design encourages airflow.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -252,6 +264,7 @@ export const womenProducts = [
     price: "$45",
     new: true,
     category: "Accessories",
+    surface: "synthetic grass",
     description:
       "Bam! Bam! Bam! Bam!  0-50% The only formula for greatness is hard work, dedication and discipline. Start your journey with the Nike Everyday Playground 8P Basketball, the perfect outdoor ball for everyone.",
     shippingInfo:
@@ -295,7 +308,7 @@ export const womenProducts = [
     new: true,
     category: "Clothing",
     description:
-      "Adjustable locking elastic drawstring allows for easy fit. Center front pleat creates a custom look. Matte nylon fabric is lightweight and durable with a wrinkled look.",
+      "Adjustable locking elastic drawstring allows for easy fit. Center front pleat creates a custom look. 40% off Matte nylon fabric is lightweight and durable with a wrinkled look.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -333,6 +346,7 @@ export const womenProducts = [
     price: "$136",
     new: true,
     category: "Clothing",
+    type: "Leggings",
     description:
       "Designed to reduce rolling,  0-50%  bunching and slipping, the extra-wide waistband helps keep you supported and smooth at the waist. Nike Dri-FIT technology wicks sweat away from your skin for faster evaporation, helping you stay dry and comfortable.",
     shippingInfo:
@@ -354,6 +368,7 @@ export const womenProducts = [
     price: "$45",
     new: true,
     category: "Clothing",
+
     description:
       "Wherever your path takes you, this easy-fitting,  0-50% sweat-wicking tee is designed to help keep you dry and comfortable. Yes, you read that right - the double Swoosh graphic mimics your movements to inspire you to keep going.",
     shippingInfo:
@@ -375,6 +390,8 @@ export const womenProducts = [
     price: "$250",
     new: true,
     category: "Footwear",
+    type: "Boots",
+    surface: "natural grass",
     description:
       "From the durable stitching to the sleek materials and cupsole design, this shoe offers a durable style that's softer than a glass backboard. Originally designed for high-performance basketball, Nike Air cushioning delivers long-lasting comfort.",
     shippingInfo:
@@ -419,7 +436,8 @@ export const womenProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/996581-1000-1000?v=638556560072730000&width=1000&height=1000&aspect=true",
     price: "$35",
     new: true,
-    category: "Accessories",
+    category: "Clothing",
+    type: "T-Shirts",
     description:
       "50-100% cotton, 0-50% polyester Material percentages may vary. Check label for actual composition. Embroidered Futura logo Machine wash Imported.",
     shippingInfo:
@@ -460,6 +478,7 @@ export const womenProducts = [
     price: "$37",
     new: true,
     category: "Accessories",
+
     description:
       "When you put on this cap, you're ready to fly.   0-50% And you will with this dad cap's classic style and mid-depth design. The adjustable strap provides the ideal fit.",
     shippingInfo:
@@ -502,8 +521,9 @@ export const womenProducts = [
     price: "$65",
     new: true,
     category: "Clothing",
+    type: "Sweatshirts",
     description:
-      "Go from the street to the studio in this roomy top. The raw hem hits just below the bust for a stylish workout. Soft on the outside with unbrushed loops on the inside, the mid-weight French terry fabric provides breathability, so it's comfortable enough to wear year-round, no matter the temperature.",
+      "Go from the street to the studio in this roomy top. The raw hem hits just below the bust for a stylish workout. 40% off Soft on the outside with unbrushed loops on the inside, the mid-weight French terry fabric provides breathability, so it's comfortable enough to wear year-round, no matter the temperature.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -523,7 +543,8 @@ export const womenProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/1047675-1000-1000?v=638596754217570000&width=1000&height=1000&aspect=true",
     price: "$269",
     new: true,
-    category: "Footwear",
+    category: "Clothing",
+    type: "Leggings",
     description:
       "Opaque fabric and a high waist keep your butt area covered no matter how much you bend and stretch. Fewer seams provide a smooth, flattering fit. Plus, the waistband is mesh-lined for a stay-put design and added support.",
     shippingInfo:
@@ -544,8 +565,10 @@ export const womenProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/971048-1000-1000?v=638551762818630000&width=1000&height=1000&aspect=true",
     price: "$97",
     new: true,
-    category: "Clothing",
-    description: "",
+    category: "Footwear",
+    type: "Boots",
+    surface: "natural grass",
+    description: "40% off",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
@@ -567,6 +590,7 @@ export const womenProducts = [
     price: "$75",
     new: true,
     category: "Clothing",
+    type: "Sweatshirts",
     description:
       "For the first time in our history, Nike has developed an all-new Zoom Air unit. It sits in the sole and provides an extra level of springy feel underfoot that helps you move faster on the pitch and create separation when it matters most – whether you’re scoring goals, getting to the ball first or dribbling past defenders.",
     shippingInfo:
@@ -586,21 +610,22 @@ export const womenProducts = [
     id: 28,
     name: "Nike Sportswear Phoenix Fleece",
     imageUrl:
-      "https://nikearprod.vtexassets.com/arquivos/ids/1047679-1000-1000?v=638596754217570000&width=1000&height=1000&aspect=true",
+      "https://nikearprod.vtexassets.com/arquivos/ids/997450-800-800?width=800&height=800&aspect=true",
     price: "$89",
     new: true,
     category: "Clothing",
+    type: "Sweatshirts",
     description:
       "Contrasting details and an oversized fit make this jacket a statement of style. Woven twill fabric provides a structured, durable feel that flexes with you for easy movement. Add dropped shoulders, elastic waistband, and fold-over collar for a complete retro, modernized feel.",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days.",
     paymentMethods: "We accept credit cards, debit cards and Mercado Pago",
     images: [
-      "https://nikearprod.vtexassets.com/arquivos/ids/1047679-1000-1000?v=638596754217570000&width=1000&height=1000&aspect=true",
-      "https://nikearprod.vtexassets.com/arquivos/ids/845437-800-800?width=800&height=800&aspect=true",
-      "https://nikearprod.vtexassets.com/arquivos/ids/848588-800-800?width=800&height=800&aspect=true",
-      "https://nikearprod.vtexassets.com/arquivos/ids/851327-800-800?width=800&height=800&aspect=true",
-      "https://nikearprod.vtexassets.com/arquivos/ids/860285-800-800?width=800&height=800&aspect=true",
+      "https://nikearprod.vtexassets.com/arquivos/ids/997450-800-800?width=800&height=800&aspect=true",
+      "https://nikearprod.vtexassets.com/arquivos/ids/1000461-800-800?width=800&height=800&aspect=true",
+      "https://nikearprod.vtexassets.com/arquivos/ids/1003451-800-800?width=800&height=800&aspect=true",
+      "https://nikearprod.vtexassets.com/arquivos/ids/1006427-800-800?width=800&height=800&aspect=true",
+      "https://nikearprod.vtexassets.com/arquivos/ids/1009343-800-800?width=800&height=800&aspect=true",
     ],
     sizes: [6, 6.5, 7.5, 8, 8.5, 9, 9.5],
   },
@@ -612,6 +637,7 @@ export const womenProducts = [
     price: "$260",
     new: true,
     category: "Clothing",
+    type: "Sweatshirts",
     description:
       "Contrasting details and an oversized fit make this jacket a statement of style. Free Shipping, Woven twill fabric provides a structured, durable feel that flexes with you for easy movement. Add dropped shoulders, elastic waistband, and fold-over collar for a complete retro, modernized feel.",
     shippingInfo:
