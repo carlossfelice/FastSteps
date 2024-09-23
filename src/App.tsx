@@ -10,8 +10,8 @@ import Profile from "./components/Profile";
 import ProductDetail from "./components/ProductDetail";
 import NotFound from "./components/NotFound";
 import Favorites from "./components/Favorites";
-import { Provider } from "react-redux"; 
-import { store } from "./components/store"; 
+import { Provider } from "react-redux";
+import { store } from "./components/store";
 import Login from "./components/Login";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import BankPromotionsModal from "./components/BankPromotionsModal";
@@ -21,45 +21,27 @@ import WomenTwentyOff from "./components/WomenTwentyOff";
 import WomenThirtyOff from "./components/WomenThirtyOff";
 import WomenFortyOff from "./components/WomenFortyOff";
 
-import { initMercadoPago } from '@mercadopago/sdk-react';
-import { CartProvider } from "./components/CartContext"; // Importa el CartProvider
+import OurTeam from "./components/OurTeam";
+import Contact from "./components/Contact";
+
+import { initMercadoPago } from "@mercadopago/sdk-react";
+import { CartProvider } from "./components/CartContext";
 
 initMercadoPago("APP_USR-ffed56d9-b519-4ac2-abb4-858eb52841f8");
-
-const routes = [
-  { path: "/", element: <Home /> },
-  { path: "/women", element: <WomenCatalog /> },
-  { path: "/women/product/:productId", element: <ProductDetail section="women" /> },
-  { path: "/men", element: <MenCatalog /> },
-  { path: "/men/product/:productId", element: <ProductDetail section="men" /> },
-  { path: "/children", element: <KidsCatalog /> },
-  { path: "/children/product/:productId", element: <ProductDetail section="children" /> },
-  { path: "/about", element: <About /> },
-  { path: "/cart", element: <Cart /> },
-  { path: "/favorites", element: <Favorites /> },
-  { path: "/login", element: <Login /> },
-  { path: "/profile", element: <Profile /> },
-  { path: "/bank-promotions", element: <BankPromotionsModal /> },
-  { path: "/shop-women/50-off", element: <WomenFiftyOff /> },
-  { path: "/shop-women/free-shipping", element: <WomenFreeShipping /> },
-  { path: "*", element: <NotFound /> },
-];
 
 function App() {
   return (
     <Provider store={store}>
-      <CartProvider> {/* Descomenta el CartProvider para envolver la aplicación */}
+      <CartProvider>
         <Router>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-
             <Route path="/women" element={<WomenCatalog />} />
             <Route
               path="/women/product/:productId"
               element={<ProductDetail section="women" />}
             />
-
             <Route path="/men" element={<MenCatalog />} />
             <Route
               path="/men/product/:productId"
@@ -70,24 +52,28 @@ function App() {
               path="/children/product/:productId"
               element={<ProductDetail section="children" />}
             />
+
             <Route path="/about" element={<About />} />
+            <Route path="/our-team" element={<OurTeam />} />
+            <Route path="/contact" element={<Contact />} />
+
             <Route path="/cart" element={<Cart />} />
             <Route path="/favorites" element={<Favorites />} />
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="*" element={<NotFound />} />
             <Route path="/bank-promotions" element={<BankPromotionsModal />} />
-            <Route path="/shop-women/50-off" Component={WomenFiftyOff} />
+            <Route path="/shop-women/50-off" element={<WomenFiftyOff />} />
             <Route
               path="/shop-women/free-shipping"
-              Component={WomenFreeShipping}
+              element={<WomenFreeShipping />}
             />
             <Route path="/shop-mujer/20-off" element={<WomenTwentyOff />} />
             <Route path="/shop-mujer/30-off" element={<WomenThirtyOff />} />
             <Route path="/shop-mujer/40-off" element={<WomenFortyOff />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
-      </CartProvider> {/* Cierra el CartProvider */}
+      </CartProvider>
     </Provider>
   );
 }
