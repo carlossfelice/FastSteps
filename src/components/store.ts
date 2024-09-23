@@ -1,13 +1,12 @@
 // store.ts
 import { configureStore } from '@reduxjs/toolkit';
-import purchasesReducer from '../slices/purchasesSlice'; // Importa el slice de compras
+import purchasesReducer from '../slices/purchasesSlice';
 
 export const store = configureStore({
   reducer: {
-    purchases: purchasesReducer, // Añade el reducer de compras
+    purchases: purchasesReducer,
   },
 });
 
-// Tipos personalizados de Redux
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
