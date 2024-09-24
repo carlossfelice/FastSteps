@@ -1,7 +1,12 @@
+import CoverParticules from "../utils/cover-particles";
 
 function About() {
   return (
+    
     <div className="max-w-4xl mx-auto p-10 bg-gray-200 rounded-lg shadow-xl mt-12 ">
+                  <div className="fixed">
+        <CoverParticules />
+      </div>
       <h1 className="text-5xl font-bold text-center text-blue-800 hover:text-blue-900 transition-colors duration-200 ease-in-out">
         About Us
       </h1>

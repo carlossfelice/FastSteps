@@ -96,7 +96,7 @@ const Cart = () => {
                 <h3 className="text-lg font-semibold">{item.name}</h3>
                 <p className="text-gray-600">Size: {item.size}</p>
                 <p className="text-gray-600">{item.price}</p>
-                <p className="text-gray-400">Product ID: <span className="font-semibold">{item.id}</span></p>
+                {/* <p className="text-gray-400">Product ID: <span className="font-semibold">{item.id}</span></p> */}
                 <div className="flex items-center mt-2">
                   <button
                     onClick={() => handleDecreaseQuantity(item.id, item.size)}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MiniBannerCarousel from "./MiniBannerCarousel";
 import { womenProducts } from "./Product";
 import Footer from "./Footer";
+import CoverParticules from "../utils/cover-particles";
 
 const currentProducts = womenProducts;
 
@@ -105,6 +106,9 @@ const WomenCatalog = () => {
 
   return (
     <div>
+      <div className="fixed">
+        <CoverParticules />
+      </div>
       <MiniBannerCarousel />
 
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-10">
