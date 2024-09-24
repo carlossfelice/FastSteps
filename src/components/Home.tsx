@@ -1,3 +1,4 @@
+import CoverParticules from "../utils/cover-particles";
 import BestSeller from "./BestSeller";
 import Categories from "./Categories";
 import Featured from "./Featured";
@@ -6,6 +7,9 @@ import Footer from "./Footer";
 const Home = () => {
   return (
     <div className="bg-gray-100 text-center min-h-screen flex flex-col">
+      <div className="fixed">
+        <CoverParticules />
+      </div>
       {/* Hero Section */}
       <section
         id="hero"

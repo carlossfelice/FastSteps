@@ -1,5 +1,6 @@
 import yeseniaImage from "../assets/fotoPerfilYesenia.jpeg"; // Importa la imagen directamente
 import carlosImage from "../assets/fotoPerfilCarlos.jpeg"; // Importa la imagen directamente
+import CoverParticules from "../utils/cover-particles";
 
 const OurTeam = () => {
   const teamMembers = [
@@ -11,7 +12,8 @@ const OurTeam = () => {
       image: yeseniaImage,
       socialLinks: {
         twitter: "https://twitter.com/yesiviola",
-        linkedin: "https://www.linkedin.com/in/keilaygonzalez?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        linkedin:
+          "https://www.linkedin.com/in/keilaygonzalez?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/yesiviola",
       },
     },
@@ -31,9 +33,13 @@ const OurTeam = () => {
 
   return (
     <section className="mt-6 p-8 bg-white rounded-lg shadow-lg">
+      <div className="fixed">
+        <CoverParticules />
+      </div>
       <h2 className="text-4xl font-bold text-center text-blue-800">Our Team</h2>
       <p className="mt-4 text-lg text-gray-600 text-center">
-        Conoce a las personas que hacen posible nuestra misión. Cada uno aporta su talento y pasión.
+        Conoce a las personas que hacen posible nuestra misión. Cada uno aporta
+        su talento y pasión.
       </p>
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
