@@ -9,6 +9,7 @@ interface FilterSectionProps {
   isOpen: boolean;
   toggleOpen: () => void;
   options: string[];
+  onFilterChange: (option: string) => void;
 }
 
 interface FilterSectionProps {
@@ -60,6 +61,54 @@ const MenCatalog = () => {
   const [isProductTypeOpen, setIsProductTypeOpen] = useState(false);
   const [isSurfaceOpen, setIsSurfaceOpen] = useState(false);
 
+  const [selectedDiscount, setSelectedDiscount] = useState<string | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  const [selectedSurfaces, setSelectedSurfaces] = useState<string[]>([]);
+
+  const handleDiscountFilterChange = (discount: string) => {
+    setSelectedDiscount(discount);
+  };
+
+  const handleCategoryFilterChange = (category: string) => {
+    if (selectedCategories.includes(category)) {
+      setSelectedCategories(selectedCategories.filter((c) => c !== category));
+    } else {
+      setSelectedCategories([...selectedCategories, category]);
+    }
+  };
+
+  const handleTypeFilterChange = (type: string) => {
+    if (selectedTypes.includes(type)) {
+      setSelectedTypes(selectedTypes.filter((t) => t !== type));
+    } else {
+      setSelectedTypes([...selectedTypes, type]);
+    }
+  };
+
+  const handleSurfaceFilterChange = (surface: string) => {
+    if (selectedSurfaces.includes(surface)) {
+      setSelectedSurfaces(selectedSurfaces.filter((s) => s !== surface));
+    } else {
+      setSelectedSurfaces([...selectedSurfaces, surface]);
+    }
+  };
+
+  const filteredProducts = menProducts.filter((product) => {
+    const discountMatch =
+      selectedDiscount === null ||
+      (product.discount && product.discount === selectedDiscount);
+    const categoryMatch =
+      selectedCategories.length === 0 ||
+      selectedCategories.includes(product.category);
+    const typeMatch =
+      selectedTypes.length === 0 || selectedTypes.includes(product.type || "");
+    const surfaceMatch =
+      selectedSurfaces.length === 0 ||
+      selectedSurfaces.includes(product.surface || "");
+    return discountMatch && categoryMatch && typeMatch && surfaceMatch;
+  });
+
   return (
     <div>
       <MiniBannerCarousel />
@@ -75,6 +124,10 @@ const MenCatalog = () => {
                 <a
                   href="/shop-men/20-off"
                   className="text-gray-600 hover:underline"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleDiscountFilterChange("20%");
+                  }}
                 >
                   20% OFF
                 </a>
@@ -83,6 +136,10 @@ const MenCatalog = () => {
                 <a
                   href="/shop-men/30-off"
                   className="text-gray-600 hover:underline"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleDiscountFilterChange("30%");
+                  }}
                 >
                   30% OFF
                 </a>
@@ -91,6 +148,10 @@ const MenCatalog = () => {
                 <a
                   href="/shop-men/40-off"
                   className="text-gray-600 hover:underline"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleDiscountFilterChange("40%");
+                  }}
                 >
                   40% OFF
                 </a>
@@ -99,6 +160,10 @@ const MenCatalog = () => {
                 <a
                   href="/shop-men/50-off"
                   className="text-gray-600 hover:underline"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleDiscountFilterChange("50%");
+                  }}
                 >
                   50% OFF
                 </a>
@@ -106,90 +171,12 @@ const MenCatalog = () => {
             </ul>
           </div>
 
-          <div className="mb-6">
-            <h4 className="font-semibold mb-2">Talle</h4>
-            <ul className="grid grid-cols-3 gap-2">
-              <li>
-                <a
-                  href="/shop-men/talle/4"
-                  className="text-gray-600 hover:underline"
-                >
-                  4
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/talle/5"
-                  className="text-gray-600 hover:underline"
-                >
-                  5
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/talle/6"
-                  className="text-gray-600 hover:underline"
-                >
-                  6
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/talle/7"
-                  className="text-gray-600 hover:underline"
-                >
-                  7
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/talle/8"
-                  className="text-gray-600 hover:underline"
-                >
-                  8
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/talle/9"
-                  className="text-gray-600 hover:underline"
-                >
-                  9
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/talle/10"
-                  className="text-gray-600 hover:underline"
-                >
-                  10
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/talle/11"
-                  className="text-gray-600 hover:underline"
-                >
-                  11
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/talle/12"
-                  className="text-gray-600 hover:underline"
-                >
-                  12
-                </a>
-              </li>
-            </ul>
-          </div>
-
           <FilterSection
-            title="Categorías"
+            title="Categoríes"
             isOpen={isCategoryOpen}
             toggleOpen={() => setIsCategoryOpen(!isCategoryOpen)}
             options={["Footwear", "Clothing", "Accessories"]}
-            onFilterChange={(option) => console.log(option)}
+            onFilterChange={handleCategoryFilterChange}
           />
 
           <FilterSection
@@ -197,27 +184,22 @@ const MenCatalog = () => {
             isOpen={isProductTypeOpen}
             toggleOpen={() => setIsProductTypeOpen(!isProductTypeOpen)}
             options={["Boots", "Sweatshirts", "Leggings", "T-Shirts"]}
-            onFilterChange={(option) => console.log(option)}
+            onFilterChange={handleTypeFilterChange}
           />
 
           <FilterSection
             title="Surface"
             isOpen={isSurfaceOpen}
             toggleOpen={() => setIsSurfaceOpen(!isSurfaceOpen)}
-            options={[
-              "indoor court",
-              "natural grass",
-              "synthetic grass",
-              "Path",
-            ]}
-            onFilterChange={(option) => console.log(option)}
+            options={["indoor court", "natural grass", "synthetic grass"]}
+            onFilterChange={handleSurfaceFilterChange}
           />
         </div>
 
         <div className="w-full lg:w-3/4">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-2 cols-3 gap-4">
-            {menProducts.map((product) => (
+            {filteredProducts.map((product) => (
               <Link to={`/men/product/${product.id}`} key={product.id}>
                 <div className="bg-white shadow-lg rounded-lg p-4">
                   <img

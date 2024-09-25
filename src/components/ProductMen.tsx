@@ -6,7 +6,9 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/1037798-800-800?width=800&height=800&aspect=true",
     price: "$130",
     new: true,
-    category: "Footwear",
+    category: "Clothing",
+    type: "Sweatshirts",
+    discount: "20%",
     description:
       "Celebrate the partnership between LeBron James and Liverpool FC with this DNA jersey. Bridging the boundaries between football and basketball, this relaxed-fit style is lightweight and breathable to help keep you cool on the court, field and beyond.",
     shippingInfo:
@@ -31,6 +33,9 @@ export const menProducts = [
     price: "$35",
     new: true,
     category: "Footwear",
+    discount: "20%",
+    type: "Boots",
+    surface: "synthetic grass",
     description:
       "Whether you love to dunk tournament-style shots or you're a hoops pro who lives in the shooting zone, feel more speed, feel more ground and confidence with the LeBron NXXT Gen. We tailored it specifically to meet the demands of today's fast-paced game so you can outrun opponents with speed and strength in all directions.",
     shippingInfo:
@@ -54,6 +59,8 @@ export const menProducts = [
     price: "$95",
     new: true,
     category: "Clothing",
+    discount: "30%",
+    type: "T-Shirts",
     description:
       "Nike Power fabric provides a wide range of stretch and support so you can overcome any demands of your training.",
     shippingInfo:
@@ -76,6 +83,9 @@ export const menProducts = [
     price: "$100",
     new: true,
     category: "Footwear",
+    discount: "30%",
+    surface: "indoor court",
+
     description:
       "Strategically engineered mesh upper is soft and flexible, hugging the foot and adjusting to its shape.",
     shippingInfo:
@@ -99,7 +109,8 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/1027552-1000-1000?v=638581980528870000&width=1000&height=1000&aspect=true",
     price: "$140",
     new: true,
-    category: "Clothing",
+    category: "Footwear",
+    type: "Boots",
     description:
       "Strategically engineered mesh upper is soft and flexible, hugging the foot and adjusting to its shape.",
     shippingInfo:
@@ -123,6 +134,8 @@ export const menProducts = [
     price: "$105",
     new: true,
     category: "Footwear",
+    discount: "20%",
+    type: "synthetic grass",
     description:
       "¿Dividido entre dos looks? Ya no más, el AF1 tiene un tratamiento de dos tonos de la lengüeta a la suela. Los Swooshes y las suelas de colores divididos agregan el toque justo de interés, y la marca a juego en la lengüeta y la etiqueta de la parte posterior completan el look. Y no te preocupes, mantiene la comodidad amortiguada y el look clásico del AF1, con una confección que evoca los años 80, detalles audaces y un estilo que no pasa de moda. Da un paso adelante con este estilo elevado.",
     shippingInfo:
@@ -144,6 +157,7 @@ export const menProducts = [
     price: "$200",
     new: true,
     category: "Footwear",
+    type: "Boots",
     description: "100% cotton Machine wash Imported",
     shippingInfo:
       "We deliver nationwide. Check the estimated delivery date when you make your purchase. You can return your order for any reason, free of charge, within a period of 30 days..",
@@ -164,7 +178,8 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/994930-800-800?width=800&height=800&aspect=true",
     price: "$175",
     new: true,
-    category: "Footwear",
+    category: "Clothing",
+    type: "T-Shirts",
     description:
       "Since 2013, our premium, lightweight fleece fabric is soft inside and out, giving you plenty of warmth without adding bulk. It's now available in more options than ever to give your wardrobe the impeccable style and functional comfort it needs.",
     shippingInfo:
@@ -188,6 +203,7 @@ export const menProducts = [
     price: "$195",
     new: true,
     category: "Footwear",
+    surface: "indoor court",
     description:
       "The Pegasus’ responsive cushioning provides an energetic ride for everyday road running. Enjoy enhanced energy return with dual Zoom Air units and a ReactX Foam midsole. Plus, strategically engineered mesh, enhanced on the upper, reduces weight and increases breathability.",
     shippingInfo:
@@ -212,6 +228,7 @@ export const menProducts = [
     price: "$186",
     new: true,
     category: "Clothing",
+    type: "Sweatshirts",
     description:
       "Nike Dri-FIT technology wicks sweat away from your skin for faster evaporation, helping you stay dry and comfortable. 4-way stretch heathered knit fabric lets you move comfortably with every step..",
     shippingInfo:
@@ -234,7 +251,8 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/995675-800-800?width=800&height=800&aspect=true",
     price: "$300",
     new: true,
-    category: "Clothing",
+    category: "Footwear",
+    type: "Boots",
     description:
       "El cuero real y sintético crean un look a capas diseñado para durar. Una marca oversized inspirada en los grafitis es un homenaje a las calles que recorrés y el Air que pisas..",
     shippingInfo:
@@ -258,6 +276,7 @@ export const menProducts = [
     price: "$45",
     new: true,
     category: "Clothing",
+    discount: "20%",
     description:
       "Add a new layer to your cold-weather look. The new Nike Windrunner knit-lined jacket will add warmth to any cold-weather outfit without adding bulk. Contrasting Swoosh graphics on the front and back emphasize Nike's signature athletic style.",
     shippingInfo:
@@ -281,6 +300,7 @@ export const menProducts = [
     price: "$not available",
     new: true,
     category: "Clothing",
+    type: "T-Shirts",
     description:
       "Nike Dri-FIT technology wicks sweat away from your skin to help keep you dry and comfortable. Ultralight knit fabric has a mesh face and flat back for a cool, soft feel.",
     shippingInfo:
@@ -304,7 +324,9 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/997374-1000-1000?v=638556571502630000&width=1000&height=1000&aspect=true",
     price: "$201",
     new: true,
-    category: "Clothing",
+    category: "Footwear",
+    discount: "40%",
+    surface: "natural grass",
     description:
       "Adjustable locking elastic drawstring allows for easy fit. Center front pleat creates a custom look. Matte nylon fabric is lightweight and durable with a wrinkled look.",
     shippingInfo:
@@ -326,7 +348,8 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/1048902-1000-1000?v=638614948990600000&width=1000&height=1000&aspect=true",
     price: "$125",
     new: true,
-    category: "Accessories",
+    category: "Clothing",
+    discount: "40%",
     description:
       "Nike Dri-FIT technology wicks sweat away from your skin for faster evaporation, helping you stay dry and comfortable. Knit fabric is soft and comfortable..",
     shippingInfo:
@@ -349,6 +372,7 @@ export const menProducts = [
     price: "$350",
     new: true,
     category: "Clothing",
+    discount: "40%",
     description:
       "Layer up in this Nike Tech Jacket and open the door to possibilities. Featuring soft ripstop fabric and a mesh lining, it's lightweight and breathable, while still being durable enough for the roads less traveled. The packable hood is integrated into the collar with a closure and features an elastic drawcord to protect you from the elements.",
     shippingInfo:
@@ -372,6 +396,7 @@ export const menProducts = [
     price: "$45",
     new: true,
     category: "Clothing",
+    discount: "30%",
     description:
       "Wherever your path takes you, this easy-fitting, sweat-wicking tee is designed to help keep you dry and comfortable. Yes, you read that right - the double Swoosh graphic mimics your movements to inspire you to keep going.",
     shippingInfo:
@@ -394,6 +419,7 @@ export const menProducts = [
     price: "$300",
     new: true,
     category: "Footwear",
+    type: "Boots",
     description:
       "You know it's sleek, eye-catching and edgy, but how are you going to style this AJ1? It's made from leather and textile on the upper and has that comfortable Nike Air cushioning in the sole. So what's it going to be?.",
     shippingInfo:
@@ -418,6 +444,7 @@ export const menProducts = [
     price: "$190",
     new: true,
     category: "Clothing",
+    discount: "40%",
     description:
       "Designed for running, training and yoga, our sweat-wicking Challenger shorts are lightweight and breathable with a relaxed fit to make the most of movement. We equipped them for more than just running, with a comfortable pocket that won't chafe when you're heading from the track to the gym.",
     shippingInfo:
@@ -440,6 +467,7 @@ export const menProducts = [
     price: "offers",
     new: true,
     category: "Accessories",
+    discount: "50%",
     description:
       "50-100% cotton, 0-50% polyester Material percentages may vary. Check label for actual composition. Embroidered Futura logo Machine wash Imported, e Blazer Mid 77 Premium Nike Blazer Mid 77 Premium, Nike Air Zoom Pegasus 39, and something else.",
     shippingInfo:
@@ -462,7 +490,8 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/845257-1000-1000?v=638388486265500000&width=1000&height=1000&aspect=true",
     price: "$60",
     new: true,
-    category: "Jackets",
+    category: "Clothing",
+    discount: "50%",
     description:
       "The best thing about cold conditions? You can go back to wearing jackets. This puffer jacket adds dimension to your fit, with a high collar and quilted panels. Oh, and it keeps you warm too, but you probably already knew that.",
     shippingInfo:
@@ -484,7 +513,9 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/1027634-1000-1000?v=638581982051370000&width=1000&height=1000&aspect=true",
     price: "$37",
     new: true,
-    category: "Coverall",
+    category: "Clothing",
+    discount: "30%",
+    type: "T-Shirts",
     description:
       "The Nike Pro collection is designed to help you feel confident pushing your limits, no matter how far along you are in your fitness journey. This slim-fitting, long-sleeve T-shirt offers a soft, stretchy feel perfect for high-intensity sports and activities. Extended hems at the front and back let you stay comfortable whether you wear the shirt tucked in or untucked.",
     shippingInfo:
@@ -507,6 +538,8 @@ export const menProducts = [
     price: "$65",
     new: true,
     category: "Clothing",
+    discount: "50%",
+    type: "T-Shirts",
     description:
       "With design details specifically tailored to football's most promising stars, the slim, streamlined fit ensures nothing stands in your way. Sweat-wicking technology helps you stay cool and composed as you hone your skills.",
     shippingInfo:
@@ -530,6 +563,7 @@ export const menProducts = [
     price: "$65",
     new: true,
     category: "Clothing",
+    discount: "50%",
     description:
       "The Nike Sportswear Crewneck Sweatshirt is a staple piece that brings heritage Swoosh style to the comfort of French terry fleece.",
     shippingInfo:
@@ -552,6 +586,7 @@ export const menProducts = [
     price: "$250",
     new: true,
     category: "Footwear",
+    surface: "natural grass",
     description:
       "Premium leather upper is soft for a richer feel. The fold-over tongue features a cut line that lets you choose between a traditional or modern look. Conical studs provide the traction needed for high-speed running.",
     shippingInfo:
@@ -574,7 +609,9 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/971048-1000-1000?v=638551762818630000&width=1000&height=1000&aspect=true",
     price: "$97",
     new: true,
-    category: "Clothing",
+    category: "Footwear",
+    discount: "50%",
+    surface: "natural grass",
     description:
       "For the first time in our history, Nike has developed an all-new Zoom Air unit. It sits in the sole and provides an extra level of springy feel underfoot that helps you move faster on the pitch and create separation when it matters most – whether you’re scoring goals, getting to the ball first or dribbling past defenders.",
     shippingInfo:
@@ -598,6 +635,7 @@ export const menProducts = [
     price: "$360",
     new: true,
     category: "Footwear",
+    surface: "natural grass",
     description:
       "The Nike Mercurial Superfly 8 Elite FG features a fresh look with specialized components that help you play faster from start to finish. A stretchy collar provides extra support, and the innovative plate delivers instant responsiveness for quicker cuts at high speeds.",
     shippingInfo:
@@ -621,6 +659,8 @@ export const menProducts = [
     price: "$89",
     new: true,
     category: "Socks",
+    discount: "50%",
+
     description:
       "COMFORT AND SWEAT ABSORPTION, Power through your workout in the Nike Everyday Lightweight tights. Soft yarns with sweat-wicking technology help keep your feet comfortable and dry.",
     shippingInfo:
@@ -644,7 +684,8 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/655018-1000-1000?v=638213270761300000&width=1000&height=1000&aspect=true",
     price: "$210",
     new: true,
-    category: "Men's Running Tights",
+    category: "Clothing",
+    type: "Leggings",
     description:
       "eep up the pace in the Nike Challenger Tights. They feature a stretchy design that helps you run without restriction. Multiple pockets let you carry your essentials for miles. This product is made from at least 75% recycled polyester fibers.Keep adding miles.",
     shippingInfo:
@@ -668,6 +709,7 @@ export const menProducts = [
     price: "$80",
     new: true,
     category: "Accessories",
+    discount: "50%",
     description:
       "Jordan on your feet, Jordan on the dome. The Pro Cap is structured with a snapback closure and features a knit crown for a look that's built to last. Plus, it's decorated with understated Jordan graphics.Hit the road in this high-crown mesh cap. The foam visor, patched crown, and rope detailing provide the classic vintage style you're looking for. Wear it with your favorite Nike shoes and take your style on the road.",
     shippingInfo:
