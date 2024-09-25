@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MiniBannerCarousel from "./MiniBannerCarousel";
 import { menProducts } from "./ProductMen";
 import Footer from "./Footer";
+import CoverParticules from "../utils/cover-particles";
 
 interface FilterSectionProps {
   title: string;
@@ -28,6 +29,9 @@ const FilterSection = ({
 }: FilterSectionProps) => {
   return (
     <div className="mb-6">
+      <div className="fixed">
+        <CoverParticules />
+      </div>
       <div
         className="font-semibold mb-2 cursor-pointer flex justify-between items-center"
         onClick={toggleOpen}

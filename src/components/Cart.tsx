@@ -1,129 +1,139 @@
-import React, { useEffect, useState } from "react";
-import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-initMercadoPago("APP_USR-ffed56d9-b519-4ac2-abb4-858eb52841f8");
-
-interface CartItem {
-  id: number;
+interface CartProduct {
+  id: string;
   name: string;
-  price: number;
+  price: string;
+  imageUrl: string;
+  size: number;
   quantity: number;
-  imageUrl: string; // Agregamos una propiedad para la imagen
 }
 
-const Cart: React.FC = () => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([
-    {
-      id: 1,
-      name: "Producto de Prueba",
-      price: 100,
-      quantity: 1,
-      imageUrl: "https://via.placeholder.com/100", // URL de la imagen de prueba
-    },
-  ]);
-  const [preferenceId, setPreferenceId] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+const Cart = () => {
+  const [cartItems, setCartItems] = useState<CartProduct[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const createPreference = async () => {
-      if (cartItems.length === 0) return; // No crear preferencia si el carrito está vacío
-      if (preferenceId) return; // No crear una nueva preferencia si ya existe
+    const storedCart: CartProduct[] = JSON.parse(localStorage.getItem("cart") || "[]").map((item: CartProduct) => ({
+      ...item,
+      quantity: item.quantity || 1,
+    }));
 
-      const url = 'https://api.mercadopago.com/checkout/preferences';
-      const body = {
-        items: cartItems.map(item => ({
-          title: item.name,
-          quantity: item.quantity,
-          currency_id: 'ARS',
-          unit_price: item.price,
-        })),
-        back_urls: {
-          success: 'https://www.tuweb.com/success',
-          failure: 'https://www.tuweb.com/failure',
-          pending: 'https://www.tuweb.com/pending',
-        },
-        auto_return: 'approved',
-      };
-
-      try {
-        const response = await fetch(url, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: 'Bearer APP_USR-5556336092694735-092022-c4555c7e01eef8cfab0f28f25a22b259-2001523120'
-          },
-          body: JSON.stringify(body),
-        });
-
-        if (!response.ok) {
-          throw new Error('Error al crear la preferencia');
-        }
-
-        const data = await response.json();
-        setPreferenceId(data.id);
-      } catch (error) {
-        setError('Error al crear la preferencia. Intente nuevamente.');
-        console.error('Error al crear la preferencia:', error);
+    // Agrupar productos para evitar duplicados
+    const uniqueCartItems: { [key: string]: CartProduct } = {};
+    storedCart.forEach(item => {
+      const key = `${item.id}-${item.size}`; // Combina ID y tamaño como clave
+      if (uniqueCartItems[key]) {
+        uniqueCartItems[key].quantity += item.quantity; // Suma la cantidad si ya existe
+      } else {
+        uniqueCartItems[key] = item; // Agrega el nuevo producto
       }
-    };
+    });
 
-    createPreference();
-  }, [cartItems, preferenceId]);
+    setCartItems(Object.values(uniqueCartItems)); // Establece el estado con los productos únicos
+  }, []);
 
-  const handleRemove = (id: number) => {
-    const updatedCart = cartItems.filter(item => item.id !== id);
+  const handleRemoveFromCart = (productId: string, size: number) => {
+    const updatedCart = cartItems.filter(item => item.id !== productId || item.size !== size);
     setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
+  const handleIncreaseQuantity = (productId: string, size: number) => {
+    const updatedCart = cartItems.map(item => {
+      if (item.id === productId && item.size === size) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
+
+  const handleDecreaseQuantity = (productId: string, size: number) => {
+    const updatedCart = cartItems.map(item => {
+      if (item.id === productId && item.size === size && item.quantity > 1) {
+        return { ...item, quantity: item.quantity - 1 };
+      }
+      return item;
+    });
+    setCartItems(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
   const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cartItems.reduce((total, item) => {
+      const price = parseFloat(item.price.replace("$", "").replace(",", ""));
+      const quantity = item.quantity || 1;
+      return total + (price * quantity);
+    }, 0);
   };
 
+  const total = calculateTotal();
+
+  if (cartItems.length === 0) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-10 text-center">
+        <h2 className="text-2xl font-semibold">Your cart is empty</h2>
+        <p className="mt-4">Add some products to see them here!</p>
+        <Link to="/women" className="mt-6 inline-block bg-black text-white py-2 px-4 rounded-full">
+          Go to Store
+        </Link>
+      </div>
+    );
+  }
+
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-semibold mb-4">Carrito de Compras</h1>
-      
-      {cartItems.length === 0 ? (
-        <p>Tu carrito está vacío.</p>
-      ) : (
-        <div>
-          <ul className="space-y-4">
-            {cartItems.map(item => (
-              <li key={item.id} className="flex justify-between items-center p-4 bg-gray-200 rounded-lg">
-                <div className="flex items-center">
-                  <img src={item.imageUrl} alt={item.name} className="w-24 h-24 object-cover rounded-lg mr-4" />
-                  <div>
-                    <h2 className="text-xl">{item.name}</h2>
-                    <p>Precio: ${item.price}</p>
-                    <p>Cantidad: {item.quantity}</p>
-                  </div>
+    <div className="max-w-7xl mx-auto px-4 py-10">
+      <h2 className="text-3xl font-semibold mb-6">Your Cart</h2>
+      <div className="space-y-4">
+        {cartItems.map(item => (
+          <div key={`${item.id}-${item.size}`} className="flex items-center justify-between border-b pb-4">
+            <div className="flex items-center">
+              <img src={item.imageUrl} alt={item.name} className="w-20 h-20 object-cover rounded-lg" />
+              <div className="ml-4">
+                <h3 className="text-lg font-semibold">{item.name}</h3>
+                <p className="text-gray-600">Size: {item.size}</p>
+                <p className="text-gray-600">{item.price}</p>
+                {/* <p className="text-gray-400">Product ID: <span className="font-semibold">{item.id}</span></p> */}
+                <div className="flex items-center mt-2">
+                  <button
+                    onClick={() => handleDecreaseQuantity(item.id, item.size)}
+                    className="bg-gray-200 px-2 rounded-l"
+                  >
+                    -
+                  </button>
+                  <span className="px-4">{item.quantity}</span>
+                  <button
+                    onClick={() => handleIncreaseQuantity(item.id, item.size)}
+                    className="bg-gray-200 px-2 rounded-r"
+                  >
+                    +
+                  </button>
                 </div>
-                <button
-                  className="bg-red-500 text-white px-2 py-1 rounded-lg hover:bg-red-600 text-sm"
-                  onClick={() => handleRemove(item.id)}
-                >
-                  Eliminar
-                </button>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-6 p-4 bg-gray-300 rounded-lg">
-            <h2 className="text-xl font-semibold">Total: ${calculateTotal()}</h2>
+              </div>
+            </div>
+            <button
+              className="text-red-500 hover:text-red-700 transition duration-200"
+              onClick={() => handleRemoveFromCart(item.id, item.size)}
+            >
+              Remove
+            </button>
           </div>
-
-          {error && <p className="text-red-500">{error}</p>}
-
-          <div className="mt-4">
-            {preferenceId && (
-              <Wallet 
-                initialization={{ preferenceId }} 
-                customization={{ texts: { valueProp: 'smart_option' }}}
-              />
-            )}
-          </div>
-        </div>
-      )}
+        ))}
+      </div>
+      <div className="mt-6">
+        <h3 className="text-2xl font-semibold">Total: ${total.toFixed(2)}</h3>
+      </div>
+      <div className="mt-6">
+        <button
+          onClick={() => navigate("/checkout", { state: { cartItems } })}
+          className="bg-blue-500 text-white py-2 px-4 rounded-full"
+        >
+          Proceed to Checkout
+        </button>
+      </div>
     </div>
   );
 };

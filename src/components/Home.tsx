@@ -1,3 +1,4 @@
+import CoverParticules from "../utils/cover-particles";
 import BestSeller from "./BestSeller";
 import Categories from "./Categories";
 import Featured from "./Featured";
@@ -6,11 +7,16 @@ import Footer from "./Footer";
 const Home = () => {
   return (
     <div className="bg-gray-100 text-center min-h-screen flex flex-col">
-      <div
+      <div className="fixed">
+        <CoverParticules />
+      </div>
+      {/* Hero Section */}
+      <section
+        id="hero"
         className="relative bg-cover bg-center h-[85vh]"
         style={{
           backgroundImage:
-            "url('https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/zoom/1017193-0001V1.jpg')", // Asegúrate de que la imagen se vea como fondo
+            "url('https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/zoom/1017193-0001V1.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
@@ -26,14 +32,31 @@ const Home = () => {
             </button>
           </div>
         </div>
-      </div>
-      <div>
-      
+      </section>
+
+      {/* Best Seller Section */}
+      <section id="best-sellers">
+        <h2 className="sr-only">Best Sellers</h2>
         <BestSeller />
+      </section>
+
+      {/* Categories Section */}
+      <section id="categories">
+        <h2 className="sr-only">Categories</h2>
         <Categories />
+      </section>
+
+      {/* Featured Section */}
+      <section id="featured">
+        <h2 className="sr-only">Featured</h2>
         <Featured />
+      </section>
+
+      {/* Footer Section */}
+      <footer id="footer">
+        <h2 className="sr-only">Footer</h2>
         <Footer />
-      </div>
+      </footer>
     </div>
   );
 };

@@ -34,16 +34,15 @@ const getProductArray = (section: "women" | "men" | "children"): Product[] => {
 const ProductDetail = ({ section }: ProductDetailProps) => {
   const { productId } = useParams<{ productId: string }>();
   const currentProducts = getProductArray(section);
-
   const product = currentProducts.find((p) => p.id === Number(productId));
 
   const [selectedImage, setSelectedImage] = useState<string>(
     product?.images?.[0] || product?.imageUrl || ""
   );
-
   const [selectedSize, setSelectedSize] = useState<number | null>(null);
   const [isShippingOpen, setIsShippingOpen] = useState(false);
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
+  const [cartMessage, setCartMessage] = useState<string>("");
 
   const handleSizeSelect = (size: number) => {
     setSelectedSize(size);
@@ -55,7 +54,16 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
 
   const addToCart = (product: Product, size: number | null) => {
     if (size) {
-      console.log(`Added ${product.name} of size ${size} to cart.`);
+      const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+      const newProduct = { ...product, size };
+      cart.push(newProduct);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Mostrar mensaje
+      setCartMessage(`Producto agregado al carrito`);
+      
+      // Limpiar mensaje después de 2 segundos
+      setTimeout(() => setCartMessage(""), 2000);
     } else {
       console.log("Please select a size.");
     }
@@ -81,7 +89,7 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
   return (
     <div>
       <MiniBannerCarousel />
-      <div className="flex flex-col lg:flex-row  max-w-7xl mx-auto px-4 py-10">
+      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-10">
         <div className="w-full lg:w-1/2">
           {product && (
             <img
@@ -143,6 +151,8 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
             {selectedSize ? "Add to Cart" : "Select a Size"}
           </button>
 
+          {cartMessage && <p className="mt-4 text-green-600">{cartMessage}</p>}
+
           <div className="mt-6">
             <h4
               className="text-lg font-semibold mb-2 cursor-pointer flex items-center"
@@ -174,7 +184,7 @@ const ProductDetail = ({ section }: ProductDetailProps) => {
           to={`/${section}`}
           className="inline-block bg-gray-600 text-white py-2 px-4 rounded-lg mb-4"
         >
-          Return a{" "}
+          Return to{" "}
           {section === "women"
             ? "Women"
             : section === "men"

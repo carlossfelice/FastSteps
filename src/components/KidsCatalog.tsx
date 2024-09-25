@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { kidsProducts } from "./ProductKids";
 import MiniBannerCarousel from "./MiniBannerCarousel";
 import Footer from "./Footer";
+import CoverParticules from "../utils/cover-particles";
 
 interface FilterSectionProps {
   title: string;
@@ -62,6 +63,9 @@ const KidsCatalog = () => {
 
   return (
     <div>
+      <div className="fixed">
+        <CoverParticules />
+      </div>
       <MiniBannerCarousel />
 
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-10">
