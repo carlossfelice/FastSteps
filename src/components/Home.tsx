@@ -1,12 +1,19 @@
+// Home.tsx (change the file extension to .tsx if it’s not already)
+import React from 'react';
 import CoverParticules from "../utils/cover-particles";
 import BestSeller from "./BestSeller";
 import Categories from "./Categories";
 import Featured from "./Featured";
 import Footer from "./Footer";
 
-const Home = () => {
+// Define the props interface
+interface HomeProps {
+  darkMode: boolean; // Specify that darkMode is a boolean
+}
+
+const Home: React.FC<HomeProps> = ({ darkMode }) => { // Use the defined props interface
   return (
-    <div className="bg-gray-100 text-center min-h-screen flex flex-col">
+    <div className={`bg-gray-100 text-center min-h-screen flex flex-col ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}>
       <div className="fixed">
         <CoverParticules />
       </div>
@@ -15,8 +22,7 @@ const Home = () => {
         id="hero"
         className="relative bg-cover bg-center h-[85vh]"
         style={{
-          backgroundImage:
-            "url('https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/zoom/1017193-0001V1.jpg')",
+          backgroundImage: "url('https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/zoom/1017193-0001V1.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
@@ -55,7 +61,7 @@ const Home = () => {
       {/* Footer Section */}
       <footer id="footer">
         <h2 className="sr-only">Footer</h2>
-        <Footer />
+        <Footer/> {/* Pasa darkMode aquí */}
       </footer>
     </div>
   );

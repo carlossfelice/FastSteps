@@ -30,18 +30,17 @@ const CoverParticules = () => {
                   mode: "repulse", // Las partículas se repelen al pasar el mouse
                 },
               },
+              modes: {
+                repulse: {
+                  distance: 100, // Distancia de repulsión
+                  duration: 1, // Duración de la repulsión
+                },
+              },
             },
             particles: {
               color: {
-                value: "fff", // Color más brillante
+                value: "#fff", // Color más brillante
               },
-              // links: {
-              //   color: "#fff", // Color más brillante para los enlaces
-              //   distance: 150,
-              //   enable: true,
-              //   opacity: 0.8, // Más opacidad para los enlaces
-              //   width: 2, // Ancho del enlace
-              // },
               move: {
                 direction: "none",
                 enable: true,
@@ -49,7 +48,7 @@ const CoverParticules = () => {
                   default: "bounce",
                 },
                 random: false,
-                speed: 1, // Aumenta la velocidad de movimiento
+                speed: 0.5, // Reduce la velocidad de movimiento
                 straight: false,
               },
               number: {

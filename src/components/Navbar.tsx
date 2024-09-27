@@ -13,11 +13,15 @@ import {
 import logo from "../assets/FS-logo10.jpg";
 import CoverParticules from "../utils/cover-particles";
 
-export const Navbar = () => {
+interface NavbarProps {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState("");
-  const [darkMode, setDarkMode] = useState(false); // Dark mode state
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -33,6 +37,7 @@ export const Navbar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const handleMouseEnter = (menu: string) => {
     setDropdownOpen(menu);
   };
@@ -40,17 +45,16 @@ export const Navbar = () => {
   const handleMouseLeave = () => {
     setDropdownOpen("");
   };
-
   return (
     <>
       <div className="fixed">
         <CoverParticules />
       </div>
       <nav
-        className={`h-24 flex items-center justify-between px-4 sm:px-8 shadow-lg z-50 ${
-          darkMode ? "bg-gray-800 text-gray-200" : "bg-gray-300 text-gray-800"
-        }`}
-      >
+      className={`h-24 flex items-center justify-between px-4 sm:px-8 shadow-lg z-50 ${
+        darkMode ? "bg-gray-800 text-gray-200" : "bg-gray-300 text-gray-800"
+      }`}
+    >
         {/* Logo and Menu */}
         <div className="flex items-center flex-grow relative">
           {/* Logo */}
@@ -670,19 +674,20 @@ export const Navbar = () => {
             <FaHeart className="text-2xl" />
           </Link>
 
-          {/* Dark Mode Toggle */}
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="focus:outline-none"
-          >
-            {darkMode ? (
-              <FaSun className="text-2xl text-yellow-500" />
-            ) : (
-              <FaMoon className="text-2xl text-gray-800" />
-            )}
-          </button>
+     {/* Dark Mode Toggle */}
+     <button
+          onClick={() => setDarkMode(prev => !prev)} // Alternar el estado
+          className="focus:outline-none"
+        >
+          {darkMode ? (
+            <FaSun className="text-2xl text-yellow-500" />
+          ) : (
+            <FaMoon className="text-2xl text-gray-800" />
+          )}
+        </button>
         </div>
       </nav>
     </>
   );
 };
+export default Navbar;
