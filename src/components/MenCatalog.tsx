@@ -13,14 +13,6 @@ interface FilterSectionProps {
   onFilterChange: (option: string) => void;
 }
 
-interface FilterSectionProps {
-  title: string;
-  isOpen: boolean;
-  toggleOpen: () => void;
-  options: string[];
-  onFilterChange: (option: string) => void;
-}
-
 const FilterSection = ({
   title,
   isOpen,
@@ -29,7 +21,7 @@ const FilterSection = ({
   onFilterChange,
 }: FilterSectionProps) => {
   return (
-    <div className="mb-6">
+    <div className="mb-6 border rounded-lg p-4 shadow-md"> {/* Añadido borde y sombra */}
       <div className="fixed">
         <CoverParticules />
       </div>
@@ -119,64 +111,30 @@ const MenCatalog = () => {
 
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-10">
         <div className="w-full lg:w-1/4 pr-6 mb-6 lg:mb-0">
-          <h3 className="text-lg font-semibold mb-4">Filters</h3>
+          <h3 className="text-lg font-semibold mb-4 text-white">Filters</h3> 
 
-          <div className="mb-6">
-            <h4 className="font-semibold mb-2">Opportunities</h4>
+          <div className="mb-6 border rounded-lg p-4 shadow-md"> 
+            <h4 className="font-semibold mb-2 text-white">Opportunities</h4>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="/shop-men/20-off"
-                  className="text-gray-600 hover:underline"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleDiscountFilterChange("20%");
-                  }}
-                >
-                  20% OFF
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/30-off"
-                  className="text-gray-600 hover:underline"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleDiscountFilterChange("30%");
-                  }}
-                >
-                  30% OFF
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/40-off"
-                  className="text-gray-600 hover:underline"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleDiscountFilterChange("40%");
-                  }}
-                >
-                  40% OFF
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/shop-men/50-off"
-                  className="text-gray-600 hover:underline"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleDiscountFilterChange("50%");
-                  }}
-                >
-                  50% OFF
-                </a>
-              </li>
+              {["20%", "30%", "40%", "50%"].map((discount) => (
+                <li key={discount}>
+                  <a
+                    href={`/shop-men/${discount}-off`}
+                    className=" hover:underline"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleDiscountFilterChange(discount);
+                    }}
+                  >
+                    {discount} OFF
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <FilterSection
-            title="Categoríes"
+            title="Categories"
             isOpen={isCategoryOpen}
             toggleOpen={() => setIsCategoryOpen(!isCategoryOpen)}
             options={["Footwear", "Clothing", "Accessories"]}
@@ -201,15 +159,15 @@ const MenCatalog = () => {
         </div>
 
         <div className="w-full lg:w-3/4">
-          <h3 className="text-lg font-semibold mb-4">Products</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-2 cols-3 gap-4">
+          <h3 className="text-lg font-semibold mb-4 text-white">Products</h3> {/* Cambiado a blanco */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredProducts.map((product) => (
               <Link to={`/men/product/${product.id}`} key={product.id}>
                 <div className="bg-white shadow-lg rounded-lg p-4">
                   <img
                     src={product.imageUrl}
                     alt={product.name}
-                    className="w-full h-80 object-cover rounded-lg"
+                    className="w-full h-64 object-cover rounded-lg" // Mantener h-64 para tamaño consistente
                   />
                   <div className="mt-4">
                     {product.new && (
