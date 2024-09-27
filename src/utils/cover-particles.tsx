@@ -26,7 +26,7 @@ const CoverParticules = () => {
                   enable: false,
                 },
                 onHover: {
-                  enable: true, // Habilita la interacción al pasar el mouse
+                  enable: false, // Habilita la interacción al pasar el mouse
                   mode: "repulse", // Las partículas se repelen al pasar el mouse
                 },
               },
