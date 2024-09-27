@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import { Link } from "react-router-dom";
 import {
   FaBars,
@@ -10,8 +10,8 @@ import {
   FaSun,
   FaMoon,
 } from "react-icons/fa";
-import logo from "../assets/FS-logo10.jpg";
 import CoverParticules from "../utils/cover-particles";
+import logo from "../assets/FS-logo9.png"; // Asegúrate de que la ruta del logo sea correcta
 
 interface NavbarProps {
   darkMode: boolean;
@@ -45,16 +45,17 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   const handleMouseLeave = () => {
     setDropdownOpen("");
   };
+
   return (
     <>
       <div className="fixed">
         <CoverParticules />
       </div>
       <nav
-      className={`h-24 flex items-center justify-between px-4 sm:px-8 shadow-lg z-50 ${
-        darkMode ? "bg-gray-800 text-gray-200" : "bg-gray-300 text-gray-800"
-      }`}
-    >
+        className={`h-24 flex items-center justify-between px-4 sm:px-8 shadow-lg z-50 ${
+          darkMode ? "bg-gray-800 text-gray-200" : "bg-gray-300 text-gray-800"
+        }`}
+      >
         {/* Logo and Menu */}
         <div className="flex items-center flex-grow relative">
           {/* Logo */}
@@ -175,417 +176,88 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
 
                         {path === "/Women" && (
                           <>
-                            <ul className="space-y-2">
-                              <li>
-                                <Link
-                                  to="/shop-mujer/20-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  20% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-mujer/30-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  30% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-mujer/40-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  40% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-women/50-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  50% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-women/boots"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Boots
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-women/sweatshirts"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Sweatshirts
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-women/leggings"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Leggings
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-women/tshirts"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  T-Shirts
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-women/indoor-court"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Indoor Court
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-women/natural-grass"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Natural Grass
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-women/synthetic-grass"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Synthetic Grass
-                                </Link>
-                              </li>
-                            </ul>
+                            <li>
+                              <Link
+                                to="/shop-women/boots"
+                                className={`block px-4 py-2 rounded ${
+                                  darkMode
+                                    ? "hover:bg-gray-600"
+                                    : "hover:bg-gray-200"
+                                }`}
+                              >
+                                Boots
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="/shop-women/sweatshirts"
+                                className={`block px-4 py-2 rounded ${
+                                  darkMode
+                                    ? "hover:bg-gray-600"
+                                    : "hover:bg-gray-200"
+                                }`}
+                              >
+                                Sweatshirts
+                              </Link>
+                            </li>
                           </>
                         )}
 
                         {path === "/Men" && (
                           <>
-                            <ul className="space-y-2">
-                              <li>
-                                <Link
-                                  to="/shop-men/20-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  20% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/30-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  30% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/40-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  40% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/50-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  50% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/boots"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Boots
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/sweatshirts"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Sweatshirts
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/leggings"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Leggings
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/tshirts"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  T-Shirts
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/indoor-court"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Indoor Court
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/natural-grass"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Natural Grass
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-men/synthetic-grass"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Synthetic Grass
-                                </Link>
-                              </li>
-                            </ul>
+                            <li>
+                              <Link
+                                to="/shop-men/boots"
+                                className={`block px-4 py-2 rounded ${
+                                  darkMode
+                                    ? "hover:bg-gray-600"
+                                    : "hover:bg-gray-200"
+                                }`}
+                              >
+                                Boots
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="/shop-men/sweatshirts"
+                                className={`block px-4 py-2 rounded ${
+                                  darkMode
+                                    ? "hover:bg-gray-600"
+                                    : "hover:bg-gray-200"
+                                }`}
+                              >
+                                Sweatshirts
+                              </Link>
+                            </li>
                           </>
                         )}
+
                         {path === "/Children" && (
                           <>
-                            <ul className="space-y-2">
-                              <li>
-                                <Link
-                                  to="/shop-children/20-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  20% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/30-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  30% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/40-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  40% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/50-off"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  50% OFF
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/boots"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Boots
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/sweatshirts"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Sweatshirts
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/leggings"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Leggings
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/tshirts"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  T-Shirts
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/indoor-court"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Indoor Court
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/natural-grass"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Natural Grass
-                                </Link>
-                              </li>
-                              <li>
-                                <Link
-                                  to="/shop-children/synthetic-grass"
-                                  className={`block px-4 py-2 rounded ${
-                                    darkMode
-                                      ? "hover:bg-gray-600"
-                                      : "hover:bg-gray-200"
-                                  }`}
-                                >
-                                  Synthetic Grass
-                                </Link>
-                              </li>
-                            </ul>
+                            <li>
+                              <Link
+                                to="/shop-children/toys"
+                                className={`block px-4 py-2 rounded ${
+                                  darkMode
+                                    ? "hover:bg-gray-600"
+                                    : "hover:bg-gray-200"
+                                }`}
+                              >
+                                Toys
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to="/shop-children/clothes"
+                                className={`block px-4 py-2 rounded ${
+                                  darkMode
+                                    ? "hover:bg-gray-600"
+                                    : "hover:bg-gray-200"
+                                }`}
+                              >
+                                Clothes
+                              </Link>
+                            </li>
                           </>
                         )}
 
@@ -674,20 +346,21 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             <FaHeart className="text-2xl" />
           </Link>
 
-     {/* Dark Mode Toggle */}
-     <button
-          onClick={() => setDarkMode(prev => !prev)} // Alternar el estado
-          className="focus:outline-none"
-        >
-          {darkMode ? (
-            <FaSun className="text-2xl text-yellow-500" />
-          ) : (
-            <FaMoon className="text-2xl text-gray-800" />
-          )}
-        </button>
+          {/* Dark Mode Toggle */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="focus:outline-none"
+          >
+            {darkMode ? (
+              <FaSun className="text-2xl text-yellow-500" />
+            ) : (
+              <FaMoon className="text-2xl text-gray-800" />
+            )}
+          </button>
         </div>
       </nav>
     </>
   );
 };
+
 export default Navbar;
