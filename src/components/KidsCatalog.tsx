@@ -184,7 +184,7 @@ const KidsCatalog = () => {
             title="categoríes"
             isOpen={isCategoryOpen}
             toggleOpen={() => setIsCategoryOpen(!isCategoryOpen)}
-            options={["footwear", "clothings", "accessories"]}
+            options={["footwear", "clothing", "accessories"]}
             onFilterChange={handleCategoryFilterChange}
           />
 
@@ -192,7 +192,7 @@ const KidsCatalog = () => {
             title="Type of Products"
             isOpen={isProductTypeOpen}
             toggleOpen={() => setIsProductTypeOpen(!isProductTypeOpen)}
-            options={["boots", "sweatshirts", "leggings", "t-shirts"]}
+            options={["shoes", "shirts"]}
             onFilterChange={handleTypeFilterChange}
           />
 
@@ -200,7 +200,7 @@ const KidsCatalog = () => {
             title="surface"
             isOpen={isSurfaceOpen}
             toggleOpen={() => setIsSurfaceOpen(!isSurfaceOpen)}
-            options={["indoor court", "natural grass", "synthetic grass"]}
+            options={["indoor", "outdoor"]}
             onFilterChange={handleSurfaceFilterChange}
           />
         </div>

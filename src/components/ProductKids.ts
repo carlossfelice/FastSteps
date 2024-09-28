@@ -7,7 +7,7 @@ export const kidsProducts = [
     price: "$100",
     new: true,
     category: "clothings",
-    type: "t-shirts",
+    type: "shirts",
 
     discount: "20%",
     description:
@@ -57,7 +57,7 @@ export const kidsProducts = [
     price: "$95",
     new: true,
     category: "clothings",
-    type: "t-shirts",
+    type: "shirts",
     discount: "20%",
     description:
       "La tela de algodón se siente suave y ligera para todos los días. El dobladillo en la parte posterior está diseñado para ser ligeramente más largo que la parte delantera para proporcionar más cobertura mientras te mueves y juegas..",
@@ -104,7 +104,7 @@ export const kidsProducts = [
     price: "$140",
     new: true,
     category: "clothings",
-    type: "T-Shirts",
+    type: "Shirts",
 
     discount: "20%",
     description:
@@ -129,7 +129,7 @@ export const kidsProducts = [
     price: "$105",
     new: true,
     category: "footwear",
-    type: "Boots",
+    type: "shoes",
     discount: "30%",
     surface: "indoor court",
     description: "Elastic laces, Flexible grooves in the sole.",
@@ -152,7 +152,7 @@ export const kidsProducts = [
     price: "$200",
     new: true,
     category: "footwear",
-    type: "Boots",
+    type: "shoes",
     discount: "20%",
     description:
       "COMFORTABLE DESIGN THAT'S EASY TO PUT ON AND TAKE OFF. The Nike Pico 5 provides a locked-in fit and excellent traction. It's made with durable material, comfortable cushioning and adjustable straps for easy on and off.",
@@ -179,6 +179,7 @@ export const kidsProducts = [
     category: "footwear",
     discount: "20%",
     surface: "indoor court",
+    type: "shoes",
     description:
       "Your baby's first steps are a turning point. (Do you have your camera ready?) We designed the Nike Swoosh 1 to give their feet the crucial tools they need for natural development and to help prevent future foot problems. Super-soft Flyknit fabric and a variety of features combine to create a shoe that's endorsed by the American Podiatric Medical Association (APMA).",
     shippingInfo:
@@ -202,7 +203,7 @@ export const kidsProducts = [
     price: "$195",
     new: true,
     category: "footwear",
-    type: "Boots",
+    type: "shoes",
     discount: "30%",
     surface: "indoor court",
     description: "Elastic laces. Flexible grooves in the sole.",
@@ -278,7 +279,7 @@ export const kidsProducts = [
     price: "$200",
     new: true,
     category: "footwear",
-    type: "Boots",
+    type: "shoes",
     discount: "40%",
     surface: "indoor court",
     description:
@@ -353,9 +354,9 @@ export const kidsProducts = [
     price: "$125",
     new: true,
     category: "footwear",
-    type: "Boots",
+    type: "shoes",
     discount: "30%",
-    surface: "natural grass",
+    surface: "indoor",
     description:
       "These low-top sneakers are made from genuine and synthetic leather that's durable and provides a classic feel. The shape gives your toes more room to move, and the fit keeps growing feet comfortable.",
     shippingInfo:
@@ -380,6 +381,7 @@ export const kidsProducts = [
     price: "$350",
     new: true,
     category: "footwear",
+    surface: "indoor",
     discount: "30%",
     description:
       "Get your kids to shine, run and go on an adventure of the day with the help of footwear made especially for fun. No, they're not sugar-coated or toy-like, but they come in amazing colors and designs that will make your little one want them every day of the year.",
@@ -406,7 +408,7 @@ export const kidsProducts = [
     new: true,
     category: "footwear",
     discount: "50%",
-    surface: "synthetic grass",
+    surface: "outdoor",
     description:
       "The upper is made from a softer material compared to the Phantom GX. The integrated texture covers the striking area of ​​the football boots, extending from the big toe side along the lacing area to the little toe, allowing for clean contact between the stud and the ball.",
     shippingInfo:
@@ -430,7 +432,7 @@ export const kidsProducts = [
     price: "$300",
     new: true,
     category: "footwear",
-    surface: "synthetic grass",
+    surface: "Indoor",
     description:
       "You know it's sleek, eye-catching and edgy, but how are you going to style this AJ1? It's made from leather and textile on the upper and has that comfortable Nike Air cushioning in the sole. So what's it going to be?.",
     shippingInfo:
@@ -590,7 +592,7 @@ export const kidsProducts = [
     price: "$250",
     new: true,
     category: "Footwear",
-    surface: "synthetic grass",
+    surface: "outdoor",
     description:
       "Premium leather upper is soft for a richer feel. The fold-over tongue features a cut line that lets you choose between a traditional or modern look. Conical studs provide the traction needed for high-speed running.",
     shippingInfo:
@@ -682,7 +684,7 @@ export const kidsProducts = [
     price: "$210",
     new: true,
     category: "footwear",
-    type: "Boots",
+    type: "shoes",
     description:
       "Inspired by the shoe originally worn by MJ during the '92 season and Summer of Basketball, the Air Jordan 7 Retro revives his championship legacy for a new generation of footwear fans now available for kids.",
     shippingInfo:
@@ -706,7 +708,7 @@ export const kidsProducts = [
     price: "$80",
     new: true,
     category: "footwear",
-    type: "Boots",
+    type: "shoes",
     description:
       "Ready for a new basketball shoe? Or how about for gym class or just playing outside? Introducing the Nike Team Hustle D 11. With this edition of our Team Hustle D series, a shoe that's super easy to get on and off is top priority. Elastic laces offer a wide opening and a large strap secures the fit. Plus, it's got soft cushioning. The ultimate basketball and playground shoe is back and ready to play.",
     shippingInfo:
