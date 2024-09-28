@@ -128,7 +128,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/982207-800-800?width=800&height=800&aspect=true",
     price: "$105",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     type: "Boots",
     discount: "30%",
     surface: "indoor court",
@@ -151,7 +151,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/498706-800-800?width=800&height=800&aspect=true",
     price: "$200",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     type: "Boots",
     discount: "20%",
     description:
@@ -176,7 +176,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/845227-800-800?width=800&height=800&aspect=true",
     price: "$175",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     discount: "20%",
     surface: "indoor court",
     description:
@@ -201,7 +201,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/982219-1000-1000?v=638555471872800000&width=1000&height=1000&aspect=true",
     price: "$195",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     type: "Boots",
     discount: "30%",
     surface: "indoor court",
@@ -404,7 +404,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/971357-1000-1000?v=638551838655800000&width=1000&height=1000&aspect=true",
     price: "$190",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     discount: "50%",
     surface: "synthetic grass",
     description:
@@ -429,7 +429,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/880606-1000-1000?v=638467320661600000&width=1000&height=1000&aspect=true",
     price: "$300",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     surface: "synthetic grass",
     description:
       "You know it's sleek, eye-catching and edgy, but how are you going to style this AJ1? It's made from leather and textile on the upper and has that comfortable Nike Air cushioning in the sole. So what's it going to be?.",
@@ -636,7 +636,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/1038196-1000-1000?v=638588122094670000&width=1000&height=1000&aspect=true",
     price: "$360",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     description:
       "Fresh look, familiar feel. This all-time favorite is made from premium materials, with Nike Air cushioning and embellished with special details.",
     shippingInfo:
@@ -659,7 +659,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/846346-1000-1000?v=638388504774770000&width=1000&height=1000&aspect=true",
     price: "$89",
     new: true,
-    category: "Leggings",
+    category: "clothing",
     type: "leggings",
     description:
       "Your favorite shoes? Check. Your favorite T-shirt? Check. Favorite flared leggings? We got them. Soft and stretchy, these comfy leggings are great for flipping, running boldly at recess, and showing off your kicks. Get moving, do stunts, and jumps in style.",
@@ -681,7 +681,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/714895-1000-1000?v=638236631262470000&width=1000&height=1000&aspect=true",
     price: "$210",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     type: "Boots",
     description:
       "Inspired by the shoe originally worn by MJ during the '92 season and Summer of Basketball, the Air Jordan 7 Retro revives his championship legacy for a new generation of footwear fans now available for kids.",
@@ -705,7 +705,7 @@ export const kidsProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/731735-1000-1000?v=638308286680570000&width=1000&height=1000&aspect=true",
     price: "$80",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     type: "Boots",
     description:
       "Ready for a new basketball shoe? Or how about for gym class or just playing outside? Introducing the Nike Team Hustle D 11. With this edition of our Team Hustle D series, a shoe that's super easy to get on and off is top priority. Elastic laces offer a wide opening and a large strap secures the fit. Plus, it's got soft cushioning. The ultimate basketball and playground shoe is back and ready to play.",

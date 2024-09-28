@@ -197,7 +197,7 @@ const KidsCatalog = () => {
           />
 
           <FilterSection
-            title="Surface"
+            title="surface"
             isOpen={isSurfaceOpen}
             toggleOpen={() => setIsSurfaceOpen(!isSurfaceOpen)}
             options={["indoor court", "natural grass", "synthetic grass"]}
