@@ -15,14 +15,6 @@ interface FilterSectionProps {
   onFilterChange: (option: string) => void;
 }
 
-interface FilterSectionProps {
-  title: string;
-  isOpen: boolean;
-  toggleOpen: () => void;
-  options: string[];
-  onFilterChange: (option: string) => void;
-}
-
 const FilterSection = ({
   title,
   isOpen,
@@ -40,7 +32,7 @@ const FilterSection = ({
         <span>{isOpen ? "−" : "+"}</span>
       </div>
       {isOpen && (
-        <ul className="space-y-3">
+        <ul className="space-y-3 text-sm">
           {options.map((option, index) => (
             <li key={index}>
               <label className="flex items-center">
@@ -105,19 +97,20 @@ const WomenCatalog = () => {
   });
 
   return (
-    <div>
-      <div className="fixed">
+    <div className="relative">
+      <div className="fixed z-0">
         <CoverParticules />
       </div>
       <MiniBannerCarousel />
 
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-10">
-        <div className="w-full lg:w-1/4 pr-6">
+        {/* Filters Section */}
+        <div className="w-full lg:w-1/4 lg:pr-6 mb-8 lg:mb-0">
           <h3 className="text-lg font-semibold mb-4">Filters</h3>
 
           <div className="mb-6">
             <h4 className="font-semibold mb-2">Opportunities</h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 text-sm">
               <li>
                 <a
                   href="/shop-mujer/20-off"
@@ -153,6 +146,7 @@ const WomenCatalog = () => {
             </ul>
           </div>
 
+          {/* Categories Filters */}
           <FilterSection
             title="Categories"
             isOpen={isCategoryOpen}
@@ -161,6 +155,7 @@ const WomenCatalog = () => {
             onFilterChange={handleCategoryFilterChange}
           />
 
+          {/* Type Filters */}
           <FilterSection
             title="Type of Products"
             isOpen={isProductTypeOpen}
@@ -169,6 +164,7 @@ const WomenCatalog = () => {
             onFilterChange={handleTypeFilterChange}
           />
 
+          {/* Surface Filters */}
           <FilterSection
             title="Surface"
             isOpen={isSurfaceOpen}
@@ -178,16 +174,17 @@ const WomenCatalog = () => {
           />
         </div>
 
+        {/* Products Section */}
         <div className="w-full lg:w-3/4">
           <h3 className="text-lg font-semibold mb-4">Products</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg-grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProducts.map((product) => (
               <Link to={`/women/product/${product.id}`} key={product.id}>
                 <div className="bg-white shadow-lg rounded-lg p-4">
                   <img
                     src={product.imageUrl}
                     alt={product.name}
-                    className="w-full h-80 object-cover rounded-lg"
+                    className="w-full h-60 object-cover rounded-lg"
                   />
                   <div className="mt-4">
                     {product.new && (
@@ -204,9 +201,7 @@ const WomenCatalog = () => {
           </div>
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

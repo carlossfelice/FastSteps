@@ -82,7 +82,7 @@ const BestSeller = () => {
         scrollRef.current.scrollBy({
           top: 0,
           left: 400,
-          behavior: "auto",
+          behavior: "smooth",
         });
       }
     }, 2000);
@@ -98,19 +98,19 @@ const BestSeller = () => {
         </h2>
         <div
           ref={scrollRef}
-          className="flex space-x-6 overflow-x-scroll scrollbar-hide"
+          className="flex space-x-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
         >
           {products.map((product) => (
             <div
               key={product.id}
-              className="min-w-[270px] bg-gray-100 shadow-lg rounded-lg p-8"
+              className="min-w-[270px] sm:min-w-[400px] bg-gray-100 shadow-lg rounded-lg p-6 snap-center"
             >
               <img
                 src={product.imageUrl}
                 alt={product.name}
                 className="w-full h-40 object-cover rounded-t-lg"
               />
-              <div className="p-6 text-left">
+              <div className="p-4 text-left">
                 <h3 className="text-xl font-semibold">{product.name}</h3>
                 <p className="text-gray-600">{product.price}</p>
               </div>

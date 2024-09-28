@@ -46,8 +46,8 @@ const Featured = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
         top: 0,
-        left: 500,
-        behavior: "auto",
+        left: -300,
+        behavior: "smooth",
       });
     }
   };
@@ -56,15 +56,15 @@ const Featured = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
         top: 0,
-        left: 500,
-        behavior: "auto",
+        left: 300,
+        behavior: "smooth",
       });
     }
   };
 
   return (
     <div className="bg-white py-10">
-      <div className="max-w-1xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         <h2 className="text-4xl font-bold mb-6 text-center bg-gray-300">
           Featured
         </h2>
@@ -76,7 +76,7 @@ const Featured = () => {
             ‹
           </button>
           <button
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 text-white p-2 rounded-full"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-400 text-white p-2 rounded-full"
             onClick={scrollRight}
           >
             ›
@@ -84,20 +84,22 @@ const Featured = () => {
 
           <div
             ref={scrollRef}
-            className="flex space-x-6 overflow-x-scroll scrollbar-hide"
+            className="flex space-x-6 overflow-x-scroll scrollbar-hide snap-x snap-mandatory"
           >
             {featuredItems.map((item) => (
               <div
                 key={item.id}
-                className="min-w-[350px] bg-gray-100 shadow-lg rounded-lg p-4"
+                className="min-w-[250px] sm:min-w-[350px] bg-gray-100 shadow-lg rounded-lg p-4 snap-center"
               >
                 <img
                   src={item.imageUrl}
                   alt={item.name}
-                  className="w-full h-100 object-cover rounded-lg"
+                  className="w-full h-60 object-cover rounded-lg"
                 />
                 <div className="p-4 text-left">
-                  <h3 className="text-xl font-semibold">{item.name}</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold">
+                    {item.name}
+                  </h3>
                 </div>
               </div>
             ))}

@@ -48,19 +48,23 @@ export const Navbar = () => {
           <CoverParticules />
         </div>
         <nav
-          className={`h-24 flex items-center justify-between px-4 sm:px-8 shadow-lg z-50 ${
+          className={`h-24 flex items-center justify-between px-4 sm:px-8 shadow-lg z-50 w-full ${
             darkMode ? "bg-gray-800 text-gray-200" : "bg-gray-300 text-gray-800"
           }`}
         >
           {/* Logo and Menu */}
-          <div className="flex items-center flex-grow relative">
+          <div className="flex items-center">
             {/* Logo */}
-            <Link to="/" className="flex-shrink-0 z-50">
-              <img src={logo} alt="Logo" className="h-24 rounded-lg " />
+            <Link to="/" className="flex-shrink-0">
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-16 w-16 sm:h-20 sm:w-20 rounded-lg "
+              />
             </Link>
 
             {/* Hamburger Icon on Small Screens */}
-            <div className="sm:hidden flex-grow text-right z-50">
+            <div className="sm:hidden flex-grow text-right">
               <button
                 onClick={toggleMenu}
                 className={`text-2xl ${
@@ -108,11 +112,11 @@ export const Navbar = () => {
                     {/* Dropdown Menu */}
                     {dropdownOpen === path && (
                       <div
-                        className={`absolute left-0 top-full  ${
+                        className={`absolute left-0 top-full sm:w-64  ${
                           darkMode
                             ? "bg-gray-700 text-gray-200"
                             : "bg-white text-gray-800"
-                        } shadow-lg rounded-lg w-48 sm:w-64 z-50`}
+                        } shadow-lg rounded-lg z-50`}
                       >
                         <ul className="space-y-2 p-2">
                           {/* Dropdown items */}
@@ -124,7 +128,7 @@ export const Navbar = () => {
                                   onClick={() =>
                                     scrollToSection("best-sellers")
                                   }
-                                  className={`block px-4 py-2 rounded ${
+                                  className={`block px-4 py-2 hover:bg-gray-200 rounded ${
                                     darkMode
                                       ? "hover:bg-gray-600"
                                       : "hover:bg-gray-200"
@@ -626,7 +630,7 @@ export const Navbar = () => {
           </div>
 
           {/* Right Side: Icons and Dark Mode Toggle */}
-          <div className="flex items-center space-x-4">
+          <div className="hidden sm:flex items-center space-x-4">
             {/* Search Bar */}
             <div className="relative">
               <input
@@ -634,7 +638,7 @@ export const Navbar = () => {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className={`px-3 py-1 rounded ${
+                className={`px-3 py-1 rounded-lg ${
                   darkMode
                     ? "bg-gray-700 text-gray-200"
                     : "bg-gray-200 text-gray-800"
