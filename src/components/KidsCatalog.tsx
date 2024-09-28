@@ -117,10 +117,10 @@ const KidsCatalog = () => {
 
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-10">
         <div className="w-full lg:w-1/4 pr-6 mb-6 lg:mb-0">
-          <h3 className="text-lg font-semibold mb-4 text-white">Filters</h3>
+          <h3 className="text-lg font-semibold mb-4 ">Filters</h3>
 
           <div className="mb-6 border rounded-lg p-4 shadow-md">
-            <h4 className="font-semibold mb-2 text-white">Opportunities</h4>
+            <h4 className="font-semibold mb-2 ">Opportunities</h4>
             <ul className="space-y-3">
               {["20%", "30%", "40%", "50%"].map((discount) => (
                 <li key={discount}>
@@ -165,7 +165,7 @@ const KidsCatalog = () => {
         </div>
 
         <div className="w-full lg:w-3/4">
-          <h3 className="text-lg font-semibold mb-4 text-white">Products</h3>
+          <h3 className="text-lg font-semibold mb-4 ">Products</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredProducts.map((product) => (
               <Link to={`/kids/product/${product.id}`} key={product.id}>

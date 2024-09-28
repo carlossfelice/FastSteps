@@ -23,9 +23,9 @@ const FilterSection = ({
   onFilterChange,
 }: FilterSectionProps) => {
   return (
-    <div className="mb-6 border border-white rounded-lg p-4 shadow-md">
+    <div className="mb-6 border rounded-lg p-4 shadow-md">
       <div
-        className="font-semibold mb-2 cursor-pointer flex justify-between items-center text-white"
+        className="font-semibold mb-2 cursor-pointer flex justify-between items-center "
         onClick={toggleOpen}
       >
         {title}
@@ -35,7 +35,7 @@ const FilterSection = ({
         <ul className="space-y-3">
           {options.map((option, index) => (
             <li key={index}>
-              <label className="flex items-center text-white">
+              <label className="flex items-center">
                 <input
                   type="checkbox"
                   className="mr-2"
@@ -105,39 +105,39 @@ const WomenCatalog = () => {
 
       <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-4 py-10">
         <div className="w-full lg:w-1/4 pr-6 mb-6 lg:mb-0">
-          <h3 className="text-lg font-semibold mb-4 text-white">Filters</h3>
+          <h3 className="text-lg font-semibold mb-4 ">Filters</h3>
 
           <div className="mb-6 border border-white rounded-lg p-4 shadow-md">
-            <h4 className="font-semibold mb-2 text-white">Opportunities</h4>
+            <h4 className="font-semibold mb-2 ">Opportunities</h4>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="/shop-mujer/20-off"
-                  className="hover:underline text-white"
+                  href="/women/shop-women/20-off"
+                  className="hover:underline "
                 >
                   20% OFF
                 </a>
               </li>
               <li>
                 <a
-                  href="/shop-mujer/30-off"
-                  className="hover:underline text-white"
+                  href="/women/shop-women/30-off"
+                  className="hover:underline "
                 >
                   30% OFF
                 </a>
               </li>
               <li>
                 <a
-                  href="/shop-mujer/40-off"
-                  className="hover:underline text-white"
+                  href="/women/shop-women/40-off"
+                  className="hover:underline "
                 >
                   40% OFF
                 </a>
               </li>
               <li>
                 <a
-                  href="/shop-women/50-off"
-                  className="hover:underline text-white"
+                  href="/women/shop-women/50-off"
+                  className="hover:underline "
                 >
                   50% OFF
                 </a>
@@ -171,7 +171,7 @@ const WomenCatalog = () => {
         </div>
 
         <div className="w-full lg:w-3/4">
-          <h3 className="text-lg font-semibold mb-4 text-white">Products</h3>
+          <h3 className="text-lg font-semibold mb-4 ">Products</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredProducts.map((product) => (
               <Link to={`/women/product/${product.id}`} key={product.id}>
