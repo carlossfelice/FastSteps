@@ -72,8 +72,11 @@ const products = [
       "https://i.pinimg.com/736x/5e/2a/6d/5e2a6dc2b571083b78cc92a63d18ddc8.jpg",
   },
 ];
+interface BestSellerProps {
+  darkMode: boolean;
+}
 
-const BestSeller = () => {
+const BestSeller: React.FC<BestSellerProps> = ({ darkMode }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -91,9 +94,13 @@ const BestSeller = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 py-16">
+    <div className={`${darkMode ? "bg-gray-800" : "bg-gray-100"} py-16`}>
       <div className="max-w-8xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-center bg-gray-300">
+        <h2
+          className={`${
+            darkMode ? "text-white" : "text-black"
+          } text-3xl font-bold mb-6 text-center bg-gray-300`}
+        >
           Best Sellers
         </h2>
         <div
@@ -103,16 +110,28 @@ const BestSeller = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="min-w-[270px] sm:min-w-[400px] bg-gray-100 shadow-lg rounded-lg p-6 snap-center"
+              className={`${
+                darkMode ? "bg-gray-700" : "bg-gray-100"
+              } min-w-[270px] shadow-lg rounded-lg p-8`}
             >
               <img
                 src={product.imageUrl}
                 alt={product.name}
                 className="w-full h-40 object-cover rounded-t-lg"
               />
-              <div className="p-4 text-left">
-                <h3 className="text-xl font-semibold">{product.name}</h3>
-                <p className="text-gray-600">{product.price}</p>
+              <div className="p-6 text-left">
+                <h3
+                  className={`${
+                    darkMode ? "text-white" : "text-black"
+                  } text-xl font-semibold`}
+                >
+                  {product.name}
+                </h3>
+                <p
+                  className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}
+                >
+                  {product.price}
+                </p>
               </div>
             </div>
           ))}

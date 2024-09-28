@@ -1,260 +1,209 @@
-// import logo from "../assets/FS-logo10.jpg";
-// const Footer = () => {
-//   return (
-//     <footer className="bg-gray-300 py-10">
-//       <div className="max-w-7xl mx-auto px-4">
-//         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-//           <div>
-//             <img
-//               src={logo}
-//               alt="Logo"
-//               className="w-40 mb-4 h-24 rounded-lg"
-//             />
-//             <p className="text-gray-700">The Comfort Technology Company.</p>
-//           </div>
-
-//           <div>
-//             <h3 className="text-lg font-semibold mb-4">Attendance</h3>
-//             <ul className="space-y-2">
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Contact
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Shipments
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Payments and Security
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Regret Button
-//                 </a>
-//               </li>
-//             </ul>
-//           </div>
-//           <div>
-//             <h3 className="text-lg font-semibold mb-4">Information</h3>
-//             <ul className="space-y-2">
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Exchanges and returns
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Size guides
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Frequently Asked Questions
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Tecnologies
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Us
-//                 </a>
-//               </li>
-//             </ul>
-//           </div>
-//           <div>
-//             <h3 className="text-lg font-semibold mb-4">Categoríes</h3>
-//             <ul className="space-y-2">
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Women
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Man
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   Children
-//                 </a>
-//               </li>
-//               <li>
-//                 <a href="#" className="text-gray-600 hover:text-gray-800">
-//                   30% OFF
-//                 </a>
-//               </li>
-//             </ul>
-//           </div>
-//         </div>
-
-//         <div className="mt-8 text-center text-gray-500 text-sm">
-//           <p>
-//             © 2023 FS. All rights reserved | Designed & Developed by Innovate
-//             Group | Shopify Plus Partner
-//           </p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
+import React, { useEffect, useState } from "react";
 import logo from "../assets/FS-logo10.jpg";
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
-const Footer = () => {
+const Footer: React.FC = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const storedMode = localStorage.getItem("darkMode");
+    setDarkMode(storedMode === "true");
+  }, []);
+
   return (
-    <footer className="bg-gray-300 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {/* Logo and description */}
-          <div>
+    <footer
+      className={`py-10 ${
+        darkMode ? "bg-gray-900 text-gray-300" : "bg-gray-100 text-gray-700"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="flex flex-col items-center justify-center text-center">
             <img
               src={logo}
-              alt="Logo"
-              className="w-29 sm:w-40 mb-4 h-auto rounded-lg"
+              alt="FS Logo"
+              className="w-40 h-24 mb-4 rounded-lg object-cover shadow-lg"
             />
-            <p className="text-gray-700 text-sm sm:text-base">
-              The Comfort Technology Company.
+            <p className="text-sm">The Comfort Technology Company.</p>
+            <p className="text-sm mt-2">
+              Bringing innovation to your everyday comfort.
             </p>
           </div>
 
           {/* Attendance */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Attendance</h3>
+            <h3 className="text-lg font-semibold mb-4">Customer Care</h3>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/contact"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
-                  Contact
+                  Contact Us
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/shipments"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
-                  Shipments
+                  Shipping
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/payments"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
-                  Payments and Security
+                  Payments & Security
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/regret-button"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
-                  Regret Button
+                  Return Policy
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Information */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Information</h3>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/exchanges-returns"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
-                  Exchanges and returns
+                  Exchanges & Returns
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/size-guides"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
-                  Size guides
+                  Size Guides
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
-                >
-                  Frequently Asked Questions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/technologies"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
                   Technologies
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/about-us"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
-                  Us
+                  About Us
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Categories */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Categories</h3>
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/women"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
                   Women
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/men"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
                   Men
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
+                  href="/children"
+                  className={`hover:text-primary transition-colors duration-200 ${
+                    darkMode ? "text-gray-300" : "text-gray-600"
+                  }`}
                 >
                   Children
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-600 hover:text-gray-800 text-sm sm:text-base"
-                >
-                  30% OFF
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 text-center text-gray-500 text-xs sm:text-sm">
+        <div className="mt-8 text-center text-sm">
           <p>
+            Email:{" "}
+            <a
+              href="mailto:Fast-steps@gmail.com"
+              className="text-primary hover:underline"
+            >
+              fast-steps@gmail.com
+            </a>{" "}
+            | Phone:{" "}
+            <a href="tel:+123456789" className="text-primary hover:underline">
+              +123-456-789
+            </a>
+          </p>
+          <div className="flex justify-center space-x-4 mt-6">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:bg-primary hover:text-slate-400 transition-colors duration-200 rounded-full p-3  dark:bg-gray-800"
+            >
+              <FaFacebook size={24} />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:bg-primary hover:text-slate-400 transition-colors duration-200 rounded-full p-3 dark:bg-gray-800"
+            >
+              <FaTwitter size={24} />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:bg-primary hover:text-slate-400 transition-colors duration-200 rounded-full p-3  dark:bg-gray-800"
+            >
+              <FaInstagram size={24} />
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-8 text-center text-sm">
+          <p className="text-gray-500 dark:text-gray-400">
             © 2023 FS. All rights reserved | Designed & Developed by Innovate
             Group | Shopify Plus Partner
           </p>

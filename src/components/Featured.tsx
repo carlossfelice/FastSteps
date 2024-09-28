@@ -39,15 +39,19 @@ const featuredItems = [
   },
 ];
 
-const Featured = () => {
+interface FeaturedProps {
+  darkMode: boolean;
+}
+
+const Featured: React.FC<FeaturedProps> = ({ darkMode }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
         top: 0,
-        left: -300,
-        behavior: "smooth",
+        left: -500,
+        behavior: "auto",
       });
     }
   };
@@ -63,9 +67,13 @@ const Featured = () => {
   };
 
   return (
-    <div className="bg-white py-10">
-      <div className="max-w-8xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6 text-center bg-gray-300">
+    <div className={`${darkMode ? "bg-gray-800" : "bg-white"} py-10`}>
+      <div className="max-w-1xl mx-auto">
+        <h2
+          className={`${
+            darkMode ? "text-white" : "text-black"
+          } text-4xl font-bold mb-6 text-center bg-gray-300`}
+        >
           Featured
         </h2>
         <div className="relative">
@@ -89,7 +97,9 @@ const Featured = () => {
             {featuredItems.map((item) => (
               <div
                 key={item.id}
-                className="min-w-[250px] sm:min-w-[350px] bg-gray-100 shadow-lg rounded-lg p-4 snap-center"
+                className={`${
+                  darkMode ? "bg-gray-700" : "bg-gray-100"
+                } min-w-[350px] shadow-lg rounded-lg p-4`}
               >
                 <img
                   src={item.imageUrl}
@@ -97,7 +107,11 @@ const Featured = () => {
                   className="w-full h-60 object-cover rounded-lg"
                 />
                 <div className="p-4 text-left">
-                  <h3 className="text-lg sm:text-xl font-semibold">
+                  <h3
+                    className={`${
+                      darkMode ? "text-white" : "text-black"
+                    } text-xl font-semibold`}
+                  >
                     {item.name}
                   </h3>
                 </div>

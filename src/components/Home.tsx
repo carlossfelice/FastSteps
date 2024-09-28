@@ -1,20 +1,29 @@
+// Home.tsx
+import React from "react";
 import CoverParticules from "../utils/cover-particles";
 import BestSeller from "./BestSeller";
 import Categories from "./Categories";
 import Featured from "./Featured";
 import Footer from "./Footer";
 
-const Home = () => {
+interface HomeProps {
+  darkMode: boolean;
+}
+
+const Home: React.FC<HomeProps> = ({ darkMode }) => {
   return (
-    <div className="bg-gray-100 text-center min-h-screen flex flex-col">
+    <div
+      className={`min-h-screen flex flex-col ${
+        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+      }`}
+    >
       <div className="fixed">
         <CoverParticules />
       </div>
 
-      {/* Hero Section */}
       <section
         id="hero"
-        className="relative bg-cover bg-center h-[85vh] sm:h-[70vh] flex items-center justify-center"
+        className="relative bg-cover bg-center h-[90vh]"
         style={{
           backgroundImage:
             "url('https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/zoom/1017193-0001V1.jpg')",
@@ -28,33 +37,35 @@ const Home = () => {
             <p className="text-white text-lg sm:text-xl mb-6">
               The latest styles from the game's biggest stars.
             </p>
-            <button className="bg-blue-600 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-full hover:bg-blue-700 transition duration-300">
+            <button className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
               Shop Now
             </button>
           </div>
         </div>
       </section>
 
-      {/* Best Seller Section */}
-      <section id="best-sellers" className="py-8 sm:py-16">
+      <section
+        id="best-sellers"
+        className={darkMode ? "bg-gray-800" : "bg-white"}
+      >
         <h2 className="sr-only">Best Sellers</h2>
-        <BestSeller />
+        <BestSeller darkMode={darkMode} />
       </section>
 
-      {/* Categories Section */}
-      <section id="categories" className="py-8 sm:py-16">
+      <section
+        id="categories"
+        className={darkMode ? "bg-gray-800" : "bg-white"}
+      >
         <h2 className="sr-only">Categories</h2>
-        <Categories />
+        <Categories darkMode={darkMode} />
       </section>
 
-      {/* Featured Section */}
-      <section id="featured" className="py-8 sm:py-16">
+      <section id="featured" className={darkMode ? "bg-gray-800" : "bg-white"}>
         <h2 className="sr-only">Featured</h2>
-        <Featured />
+        <Featured darkMode={darkMode} />
       </section>
 
-      {/* Footer Section */}
-      <footer id="footer" className="py-8 bg-gray-300">
+      <footer id="footer">
         <h2 className="sr-only">Footer</h2>
         <Footer />
       </footer>

@@ -23,9 +23,9 @@ const FilterSection = ({
   onFilterChange,
 }: FilterSectionProps) => {
   return (
-    <div className="mb-6">
+    <div className="mb-6 border rounded-lg p-4 shadow-md">
       <div
-        className="font-semibold mb-2 cursor-pointer flex justify-between items-center"
+        className="font-semibold mb-2 cursor-pointer flex justify-between items-center "
         onClick={toggleOpen}
       >
         {title}
@@ -112,34 +112,22 @@ const WomenCatalog = () => {
             <h4 className="font-semibold mb-2">Opportunities</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="/shop-mujer/20-off"
-                  className="text-gray-600 hover:underline"
-                >
+                <a href="/women/shop-women/20-off" className="hover:underline ">
                   20% OFF
                 </a>
               </li>
               <li>
-                <a
-                  href="/shop-mujer/30-off"
-                  className="text-gray-600 hover:underline"
-                >
+                <a href="/women/shop-women/30-off" className="hover:underline ">
                   30% OFF
                 </a>
               </li>
               <li>
-                <a
-                  href="/shop-mujer/40-off"
-                  className="text-gray-600 hover:underline"
-                >
+                <a href="/women/shop-women/40-off" className="hover:underline ">
                   40% OFF
                 </a>
               </li>
               <li>
-                <a
-                  href="/shop-women/50-off"
-                  className="text-gray-600 hover:underline"
-                >
+                <a href="/women/shop-women/50-off" className="hover:underline ">
                   50% OFF
                 </a>
               </li>
