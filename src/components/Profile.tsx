@@ -26,59 +26,22 @@ const Profile = () => {
   };
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      flexDirection: 'column', 
-      alignItems: 'center', 
-      padding: '20px', 
-      backgroundColor: '#f4f4f4', 
-      borderRadius: '10px', 
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
-      maxWidth: '400px', 
-      margin: 'auto'
-    }}>
-      <h2 style={{ marginBottom: '20px' }}>Perfil de Usuario</h2>
+    <div className="flex flex-col items-center p-5 bg-gray-100 rounded-lg shadow-md max-w-sm mx-auto mt-20">
+      <h2 className="mb-5 text-xl text-gray-600 font-semibold">Perfil de Usuario</h2>
       {user ? (
-        <div style={{ 
-          textAlign: 'center', 
-          backgroundColor: '#ffffff', 
-          padding: '20px', 
-          borderRadius: '10px', 
-          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', 
-          width: '100%'
-        }}>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            marginBottom: '15px'
-          }}>
+        <div className="text-center bg-white p-5 rounded-lg shadow-md w-full">
+          <div className="flex justify-center mb-4">
             <img 
               src={user.photoURL} 
               alt="User Avatar" 
-              style={{ 
-                width: '100px', 
-                height: '100px', 
-                borderRadius: '50%', 
-                objectFit: 'cover'
-              }} 
+              className="w-24 h-24 rounded-full object-cover" 
             />
           </div>
-          <p style={{ fontSize: '18px', fontWeight: 'bold' }}>{user.name}</p>
-          <p style={{ fontSize: '16px', color: '#666' }}>{user.email}</p>
+          <p className="text-lg text-gray-600 font-bold">{user.name}</p>
+          <p className="text-md text-gray-600">{user.email}</p>
           <button 
             onClick={handleLogout} 
-            style={{ 
-              padding: '10px 20px', 
-              backgroundColor: '#db4437', 
-              color: 'white', 
-              border: 'none', 
-              borderRadius: '5px', 
-              cursor: 'pointer',
-              fontSize: '16px',
-              marginTop: '20px',
-              transition: 'background-color 0.3s',
-              outline: 'none'
-            }}
+            className="mt-5 px-4 py-2 bg-red-500 text-white rounded-lg transition duration-300 hover:bg-red-600 focus:outline-none"
           >
             Cerrar sesión
           </button>

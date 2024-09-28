@@ -1,28 +1,32 @@
-// Home.tsx (change the file extension to .tsx if it’s not already)
-import React from 'react';
+// Home.tsx
+import React from "react";
 import CoverParticules from "../utils/cover-particles";
 import BestSeller from "./BestSeller";
 import Categories from "./Categories";
 import Featured from "./Featured";
 import Footer from "./Footer";
 
-// Define the props interface
 interface HomeProps {
-  darkMode: boolean; // Specify that darkMode is a boolean
+  darkMode: boolean;
 }
 
-const Home: React.FC<HomeProps> = ({ darkMode }) => { // Use the defined props interface
+const Home: React.FC<HomeProps> = ({ darkMode }) => {
   return (
-    <div className={`bg-gray-100 text-center min-h-screen flex flex-col ${darkMode ? 'bg-gray-900 text-white' : 'bg-gray-100 text-black'}`}>
+    <div
+      className={`min-h-screen flex flex-col ${
+        darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
+      }`}
+    >
       <div className="fixed">
         <CoverParticules />
       </div>
-      {/* Hero Section */}
+
       <section
         id="hero"
-        className="relative bg-cover bg-center h-[85vh]"
+        className="relative bg-cover bg-center h-[90vh]"
         style={{
-          backgroundImage: "url('https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/zoom/1017193-0001V1.jpg')",
+          backgroundImage:
+            "url('https://dpjye2wk9gi5z.cloudfront.net/wcsstore/ExtendedSitesCatalogAssetStore/images/catalog/zoom/1017193-0001V1.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
@@ -33,35 +37,37 @@ const Home: React.FC<HomeProps> = ({ darkMode }) => { // Use the defined props i
             <p className="text-white text-lg mb-6">
               The latest styles from the game's biggest stars.
             </p>
-            <button className="bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300">
+            <button className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
               Shop Now
             </button>
           </div>
         </div>
       </section>
 
-      {/* Best Seller Section */}
-      <section id="best-sellers">
+      <section
+        id="best-sellers"
+        className={darkMode ? "bg-gray-800" : "bg-white"}
+      >
         <h2 className="sr-only">Best Sellers</h2>
-        <BestSeller />
+        <BestSeller darkMode={darkMode} />
       </section>
 
-      {/* Categories Section */}
-      <section id="categories">
+      <section
+        id="categories"
+        className={darkMode ? "bg-gray-800" : "bg-white"}
+      >
         <h2 className="sr-only">Categories</h2>
-        <Categories />
+        <Categories darkMode={darkMode} />
       </section>
 
-      {/* Featured Section */}
-      <section id="featured">
+      <section id="featured" className={darkMode ? "bg-gray-800" : "bg-white"}>
         <h2 className="sr-only">Featured</h2>
-        <Featured />
+        <Featured darkMode={darkMode} />
       </section>
 
-      {/* Footer Section */}
       <footer id="footer">
         <h2 className="sr-only">Footer</h2>
-        <Footer/> {/* Pasa darkMode aquí */}
+        <Footer />
       </footer>
     </div>
   );
