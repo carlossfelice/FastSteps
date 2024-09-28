@@ -104,7 +104,7 @@ export const kidsProducts = [
     price: "$140",
     new: true,
     category: "clothings",
-    type: "Shirts",
+    type: "shirts",
 
     discount: "20%",
     description:
@@ -639,6 +639,7 @@ export const kidsProducts = [
     price: "$360",
     new: true,
     category: "footwear",
+    type: "indoor",
     description:
       "Fresh look, familiar feel. This all-time favorite is made from premium materials, with Nike Air cushioning and embellished with special details.",
     shippingInfo:

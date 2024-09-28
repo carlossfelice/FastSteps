@@ -53,14 +53,6 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
     }
   };
 
-  // const home = (): DropdownItem[] => [
-  //   { label: "Introduction", id: "hero" },
-  //   { label: "Best Sellers", id: "best-sellers" },
-  //   { label: "Categories", id: "categories" },
-  //   { label: "Featured", id: "featured" },
-  //   { label: "Testimonials", id: "testimonials" },
-  // ];
-
   const about = (): DropdownItem[] => [
     { label: "About", href: "/about" },
     { label: "Our Team", href: "/about/our-team" },

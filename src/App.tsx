@@ -4,7 +4,7 @@ import WomenCatalog from "./components/WomenCatalog";
 import MenCatalog from "./components/MenCatalog";
 import KidsCatalog from "./components/KidsCatalog";
 import About from "./components/About";
-import { Navbar } from "./components/Navbar";
+
 import Cart from "./components/Cart";
 import Profile from "./components/Profile";
 import ProductDetail from "./components/ProductDetail";
@@ -23,8 +23,8 @@ import WomenFortyOff from "./components/WomenFortyOff";
 
 import OurTeam from "./components/OurTeam";
 import Contact from "./components/Contact";
-
 import { CartProvider } from "./components/CartContext";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
       <Provider store={store}>
         <CartProvider>
           <Router>
-            <Navbar />
+            <Navbar darkMode={false} setDarkMode={() => {}} />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/women" element={<WomenCatalog />} />
