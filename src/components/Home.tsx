@@ -58,6 +58,11 @@ const Home: React.FC<HomeProps> = ({ darkMode }) => { // Use the defined props i
         <Featured />
       </section>
 
+      {/* Testimonials Section */}
+      {/* <section id="Testimonials">
+
+      </section> */}
+      
       {/* Footer Section */}
       <footer id="footer">
         <h2 className="sr-only">Footer</h2>

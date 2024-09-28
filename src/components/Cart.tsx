@@ -20,18 +20,17 @@ const Cart = () => {
       quantity: item.quantity || 1,
     }));
 
-    // Agrupar productos para evitar duplicados
     const uniqueCartItems: { [key: string]: CartProduct } = {};
     storedCart.forEach(item => {
-      const key = `${item.id}-${item.size}`; // Combina ID y tamaño como clave
+      const key = `${item.id}-${item.size}`;
       if (uniqueCartItems[key]) {
-        uniqueCartItems[key].quantity += item.quantity; // Suma la cantidad si ya existe
+        uniqueCartItems[key].quantity += item.quantity;
       } else {
-        uniqueCartItems[key] = item; // Agrega el nuevo producto
+        uniqueCartItems[key] = item;
       }
     });
 
-    setCartItems(Object.values(uniqueCartItems)); // Establece el estado con los productos únicos
+    setCartItems(Object.values(uniqueCartItems));
   }, []);
 
   const handleRemoveFromCart = (productId: string, size: number) => {
@@ -65,8 +64,7 @@ const Cart = () => {
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => {
       const price = parseFloat(item.price.replace("$", "").replace(",", ""));
-      const quantity = item.quantity || 1;
-      return total + (price * quantity);
+      return total + (price * item.quantity);
     }, 0);
   };
 
@@ -74,10 +72,10 @@ const Cart = () => {
 
   if (cartItems.length === 0) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-10 text-center">
+      <div className="max-w-7xl mx-auto px-4 py-10 text-center text-white bg-gray-900">
         <h2 className="text-2xl font-semibold">Your cart is empty</h2>
         <p className="mt-4">Add some products to see them here!</p>
-        <Link to="/women" className="mt-6 inline-block bg-black text-white py-2 px-4 rounded-full">
+        <Link to="/women" className="mt-6 inline-block bg-blue-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
           Go to Store
         </Link>
       </div>
@@ -85,29 +83,28 @@ const Cart = () => {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div className="max-w-7xl mx-auto px-4 py-10 bg-gray-800 text-white">
       <h2 className="text-3xl font-semibold mb-6">Your Cart</h2>
       <div className="space-y-4">
         {cartItems.map(item => (
-          <div key={`${item.id}-${item.size}`} className="flex items-center justify-between border-b pb-4">
+          <div key={`${item.id}-${item.size}`} className="flex items-center justify-between bg-gray-700 rounded-lg p-4 border-b border-gray-600 hover:bg-gray-600 transition duration-200">
             <div className="flex items-center">
               <img src={item.imageUrl} alt={item.name} className="w-20 h-20 object-cover rounded-lg" />
               <div className="ml-4">
                 <h3 className="text-lg font-semibold">{item.name}</h3>
-                <p className="text-gray-600">Size: {item.size}</p>
-                <p className="text-gray-600">{item.price}</p>
-                {/* <p className="text-gray-400">Product ID: <span className="font-semibold">{item.id}</span></p> */}
+                <p className="text-gray-400">Size: {item.size}</p>
+                <p className="text-gray-300 font-bold">{item.price}</p>
                 <div className="flex items-center mt-2">
                   <button
                     onClick={() => handleDecreaseQuantity(item.id, item.size)}
-                    className="bg-gray-200 px-2 rounded-l"
+                    className="bg-gray-600 px-2 rounded-l hover:bg-gray-500 transition duration-200"
                   >
                     -
                   </button>
                   <span className="px-4">{item.quantity}</span>
                   <button
                     onClick={() => handleIncreaseQuantity(item.id, item.size)}
-                    className="bg-gray-200 px-2 rounded-r"
+                    className="bg-gray-600 px-2 rounded-r hover:bg-gray-500 transition duration-200"
                   >
                     +
                   </button>
@@ -115,7 +112,7 @@ const Cart = () => {
               </div>
             </div>
             <button
-              className="text-red-500 hover:text-red-700 transition duration-200"
+              className="text-red-400 hover:text-red-300 transition duration-200 font-semibold"
               onClick={() => handleRemoveFromCart(item.id, item.size)}
             >
               Remove
@@ -124,12 +121,12 @@ const Cart = () => {
         ))}
       </div>
       <div className="mt-6">
-        <h3 className="text-2xl font-semibold">Total: ${total.toFixed(2)}</h3>
+        <h3 className="text-2xl font-semibold">Total: <span className="text-blue-400">${total.toFixed(2)}</span></h3>
       </div>
       <div className="mt-6">
         <button
           onClick={() => navigate("/checkout", { state: { cartItems } })}
-          className="bg-blue-500 text-white py-2 px-4 rounded-full"
+          className="bg-blue-600 text-white py-2 px-4 rounded-full shadow-lg hover:bg-blue-700 transition duration-300"
         >
           Proceed to Checkout
         </button>

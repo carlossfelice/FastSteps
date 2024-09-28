@@ -42,7 +42,7 @@ function App() {
           <div className={darkMode ? 'bg-[#1E1E2F] text-[#E0E0E0]' : 'bg-[#F0F4F8] text-[#333333]'}>
             <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
             <Routes>
-              <Route path="/" element={<Home darkMode={darkMode} />} /> {/* Pasa darkMode aquí */}
+              <Route path="/" element={<Home darkMode={darkMode} />} />
               
               <Route path="/women" element={<WomenCatalog />} />
               <Route path="/women/product/:productId" element={<ProductDetail section="women" />} />
@@ -53,9 +53,10 @@ function App() {
               <Route path="/children" element={<KidsCatalog />} />
               <Route path="/children/product/:productId" element={<ProductDetail section="children" />} />
 
-              <Route path="/about" element={<About />} />
-              <Route path="/our-team" element={<OurTeam />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="about" element={<About />} />
+              <Route path="about/our-team" element={<OurTeam />} />
+              <Route path="about/contact" element={<Contact />} />
+
               <Route path="/cart" element={<Cart />} />
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/login" element={<Login />} />

@@ -66,7 +66,7 @@ const Contact = () => {
       </form>
       <div className="mt-6 text-center">
         <h2 className="text-xl font-semibold">Other Contact Methods</h2>
-        <p className="text-gray-600">Email: FastSteps@Gmail.com</p>
+        <p className="text-gray-600">Email: Fast-steps@gmail.com</p>
         <p className="text-gray-600">Phone: +123 365 549</p>
       </div>
     </div>
