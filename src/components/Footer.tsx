@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from "../assets/FS-logo10.jpg";
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
+
 const Footer: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
