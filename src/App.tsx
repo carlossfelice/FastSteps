@@ -43,12 +43,16 @@ function App() {
             <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
             <Routes>
               <Route path="/" element={<Home darkMode={darkMode} />} /> {/* Pasa darkMode aquí */}
+              
               <Route path="/women" element={<WomenCatalog />} />
               <Route path="/women/product/:productId" element={<ProductDetail section="women" />} />
+
               <Route path="/men" element={<MenCatalog />} />
               <Route path="/men/product/:productId" element={<ProductDetail section="men" />} />
+
               <Route path="/children" element={<KidsCatalog />} />
               <Route path="/children/product/:productId" element={<ProductDetail section="children" />} />
+
               <Route path="/about" element={<About />} />
               <Route path="/our-team" element={<OurTeam />} />
               <Route path="/contact" element={<Contact />} />
@@ -56,12 +60,14 @@ function App() {
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/login" element={<Login />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/bank-promotions" element={<BankPromotionsModal />} />
-              <Route path="/shop-women/50-off" element={<WomenFiftyOff />} />
-              <Route path="/shop-women/free-shipping" element={<WomenFreeShipping />} />
-              <Route path="/shop-mujer/20-off" element={<WomenTwentyOff />} />
-              <Route path="/shop-mujer/30-off" element={<WomenThirtyOff />} />
-              <Route path="/shop-mujer/40-off" element={<WomenFortyOff />} />
+
+              <Route path="/women/shop-women/20-off" element={<WomenTwentyOff />} />
+              <Route path="/women/shop-women/30-off" element={<WomenThirtyOff />} />
+              <Route path="/women/shop-women/40-off" element={<WomenFortyOff />} />
+              <Route path="/women/shop-women/50-off" element={<WomenFiftyOff />} />
+              <Route path="/women/bank-promotions" element={<BankPromotionsModal />} />
+              <Route path="/women/shop-women/free-shipping" element={<WomenFreeShipping />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
