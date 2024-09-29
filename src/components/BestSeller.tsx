@@ -79,14 +79,13 @@ interface BestSellerProps {
 const BestSeller: React.FC<BestSellerProps> = ({ darkMode }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-
   useEffect(() => {
     const scrollInterval = setInterval(() => {
       if (scrollRef.current) {
         scrollRef.current.scrollBy({
           top: 0,
           left: 400,
-          behavior: "auto",
+          behavior: "smooth",
         });
       }
     }, 2000);
@@ -95,19 +94,25 @@ const BestSeller: React.FC<BestSellerProps> = ({ darkMode }) => {
   }, []);
 
   return (
-    <div className={`${darkMode ? 'bg-gray-800' : 'bg-gray-100'} py-16`}>
+    <div className={`${darkMode ? "bg-gray-800" : "bg-gray-100"} py-16`}>
       <div className="max-w-8xl mx-auto">
-        <h2 className={`${darkMode ? 'text-white' : 'text-black'} text-3xl font-bold mb-6 text-center bg-gray-300`}>
+        <h2
+          className={`${
+            darkMode ? "text-white" : "text-black"
+          } text-3xl font-bold mb-6 text-center bg-gray-300`}
+        >
           Best Sellers
         </h2>
         <div
           ref={scrollRef}
-          className="flex space-x-6 overflow-x-scroll scrollbar-hide"
+          className="flex space-x-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
         >
           {products.map((product) => (
             <div
               key={product.id}
-              className={`${darkMode ? 'bg-gray-700' : 'bg-gray-100'} min-w-[270px] shadow-lg rounded-lg p-8`}
+              className={`${
+                darkMode ? "bg-gray-700" : "bg-gray-100"
+              } min-w-[270px] shadow-lg rounded-lg p-8`}
             >
               <img
                 src={product.imageUrl}
@@ -115,8 +120,18 @@ const BestSeller: React.FC<BestSellerProps> = ({ darkMode }) => {
                 className="w-full h-40 object-cover rounded-t-lg"
               />
               <div className="p-6 text-left">
-                <h3 className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold`}>{product.name}</h3>
-                <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>{product.price}</p>
+                <h3
+                  className={`${
+                    darkMode ? "text-white" : "text-black"
+                  } text-xl font-semibold`}
+                >
+                  {product.name}
+                </h3>
+                <p
+                  className={`${darkMode ? "text-gray-300" : "text-gray-600"}`}
+                >
+                  {product.price}
+                </p>
               </div>
             </div>
           ))}

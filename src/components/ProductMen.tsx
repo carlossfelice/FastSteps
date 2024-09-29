@@ -32,7 +32,7 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/878770-800-800?width=800&height=800&aspect=true",
     price: "$35",
     new: true,
-    category: "Footwear",
+    category: " Footwear",
     discount: "20%",
     type: "Boots",
     surface: "synthetic grass",
@@ -609,7 +609,7 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/971048-1000-1000?v=638551762818630000&width=1000&height=1000&aspect=true",
     price: "$97",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     discount: "50%",
     surface: "natural grass",
     description:
@@ -634,7 +634,7 @@ export const menProducts = [
       "https://nikearprod.vtexassets.com/arquivos/ids/792248-1000-1000?v=638378925230900000&width=1000&height=1000&aspect=true",
     price: "$360",
     new: true,
-    category: "Footwear",
+    category: "footwear",
     surface: "natural grass",
     description:
       "The Nike Mercurial Superfly 8 Elite FG features a fresh look with specialized components that help you play faster from start to finish. A stretchy collar provides extra support, and the innovative plate delivers instant responsiveness for quicker cuts at high speeds.",

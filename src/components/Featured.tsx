@@ -60,16 +60,20 @@ const Featured: React.FC<FeaturedProps> = ({ darkMode }) => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
         top: 0,
-        left: 500,
-        behavior: "auto",
+        left: 300,
+        behavior: "smooth",
       });
     }
   };
 
   return (
-    <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} py-10`}>
+    <div className={`${darkMode ? "bg-gray-800" : "bg-white"} py-10`}>
       <div className="max-w-1xl mx-auto">
-        <h2 className={`${darkMode ? 'text-white' : 'text-black'} text-4xl font-bold mb-6 text-center bg-gray-300`}>
+        <h2
+          className={`${
+            darkMode ? "text-white" : "text-black"
+          } text-4xl font-bold mb-6 text-center bg-gray-300`}
+        >
           Featured
         </h2>
         <div className="relative">
@@ -80,7 +84,7 @@ const Featured: React.FC<FeaturedProps> = ({ darkMode }) => {
             ‹
           </button>
           <button
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 text-white p-2 rounded-full"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-400 text-white p-2 rounded-full"
             onClick={scrollRight}
           >
             ›
@@ -88,20 +92,26 @@ const Featured: React.FC<FeaturedProps> = ({ darkMode }) => {
 
           <div
             ref={scrollRef}
-            className="flex space-x-6 overflow-x-scroll scrollbar-hide"
+            className="flex space-x-6 overflow-x-scroll scrollbar-hide snap-x snap-mandatory"
           >
             {featuredItems.map((item) => (
               <div
                 key={item.id}
-                className={`${darkMode ? 'bg-gray-700' : 'bg-gray-100'} min-w-[350px] shadow-lg rounded-lg p-4`}
+                className={`${
+                  darkMode ? "bg-gray-700" : "bg-gray-100"
+                } min-w-[350px] shadow-lg rounded-lg p-4`}
               >
                 <img
                   src={item.imageUrl}
                   alt={item.name}
-                  className="w-full h-100 object-cover rounded-lg"
+                  className="w-full h-60 object-cover rounded-lg"
                 />
                 <div className="p-4 text-left">
-                  <h3 className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold`}>
+                  <h3
+                    className={`${
+                      darkMode ? "text-white" : "text-black"
+                    } text-xl font-semibold`}
+                  >
                     {item.name}
                   </h3>
                 </div>

@@ -143,7 +143,7 @@ const KidsCatalog = () => {
             title="Categories"
             isOpen={isCategoryOpen}
             toggleOpen={() => setIsCategoryOpen(!isCategoryOpen)}
-            options={["Footwear", "Clothing", "Accessories"]}
+            options={["footwear", "clothing", "accessories"]}
             onFilterChange={handleCategoryFilterChange}
           />
 
@@ -151,15 +151,15 @@ const KidsCatalog = () => {
             title="Type of Products"
             isOpen={isProductTypeOpen}
             toggleOpen={() => setIsProductTypeOpen(!isProductTypeOpen)}
-            options={["Shoes", "Shirts", "Pants", "Hats"]}
+            options={["shoes", "shirts"]}
             onFilterChange={handleTypeFilterChange}
           />
 
           <FilterSection
-            title="Surface"
+            title="surface"
             isOpen={isSurfaceOpen}
             toggleOpen={() => setIsSurfaceOpen(!isSurfaceOpen)}
-            options={["Indoor", "Outdoor"]}
+            options={["indoor", "outdoor"]}
             onFilterChange={handleSurfaceFilterChange}
           />
         </div>

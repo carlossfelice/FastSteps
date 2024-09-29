@@ -31,10 +31,10 @@ const Home: React.FC<HomeProps> = ({ darkMode }) => {
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
           <div className="relative z-10 text-center max-w-2xl px-4">
-            <h1 className="text-white text-5xl font-extrabold mb-4 leading-tight">
+            <h1 className="text-white text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">
               Just dropped: new arrivals from Nike and Jordan
             </h1>
-            <p className="text-white text-lg mb-6">
+            <p className="text-white text-lg sm:text-xl mb-6">
               The latest styles from the game's biggest stars.
             </p>
             <button className="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
