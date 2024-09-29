@@ -56,7 +56,7 @@ const Footwear = () => {
               className="w-full h-64 object-cover rounded-lg"
             />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold">{product.name}</h4>
+              <h4 className="text-lg font-semibold text-gray-600">{product.name}</h4>
               <p className="text-gray-600">{product.price}</p>
             </div>
           </div>
