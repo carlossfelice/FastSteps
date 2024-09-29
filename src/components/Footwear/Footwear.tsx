@@ -41,7 +41,6 @@ const footwearProducts = [
     imageUrl:
       "https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/75e736c4-ef3a-4797-a333-4b2fbdba2667___748fd169c29965d04328e442583e7ed3.jpg",
   },
-  // Agrega más productos según sea necesario
 ];
 
 const Footwear = () => {
