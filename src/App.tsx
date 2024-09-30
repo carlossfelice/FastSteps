@@ -28,6 +28,8 @@ import Navbar from "./components/Navbar";
 import Footwear from "./components/Footwear/Footwear";
 import Clothing from "./components/Clothing/Clothing";
 import Accessories from "./components/Accessories/Accessories";
+import Casual from "./components/Casual/Casual";
+import Formal from "./components/Formal/Formal";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -109,6 +111,8 @@ function App() {
               <Route path="/women/footwear" element={<Footwear />} />
               <Route path="/women/clothing" element={<Clothing />} />
               <Route path="/women/accessories" element={<Accessories />} />
+              <Route path="/women/casual" element={<Casual />} />
+              <Route path="/women/formal" element={<Formal />} />
             </Routes>
           </div>
         </Router>
