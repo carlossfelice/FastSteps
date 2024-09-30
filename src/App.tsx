@@ -36,6 +36,8 @@ import Men20Off from "./components/Men20Off/Men20Off";
 import Men30Off from "./components/Men20Off/Men30Off";
 import Men40Off from "./components/Men20Off/Men40Off";
 import Men50Off from "./components/Men20Off/Men50Off";
+import MenFootwear from "./components/Men/MenFootwear";
+import MenClothing from "./components/Men/MenClothing";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -125,6 +127,8 @@ function App() {
               <Route path="/men/shop-men/30-off" element={<Men30Off />} />
               <Route path="/men/shop-men/40-off" element={<Men40Off />} />
               <Route path="/men/shop-men/50-off" element={<Men50Off />} />
+              <Route path="/men/footwear" element={<MenFootwear />} />
+              <Route path="/men/clothing" element={<MenClothing />} />
             </Routes>
           </div>
         </Router>

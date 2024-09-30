@@ -67,7 +67,9 @@ const accessoriesProducts = [
 const Accessories = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold mb-6 text-center">Accessories</h2>
+      <h2 className="text-4xl font-extrabold text-center my-8 text-violet-600 animate-pulse drop-shadow-lg">
+        Accessories
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {accessoriesProducts.map((product) => (
           <div key={product.id} className="bg-white shadow-lg rounded-lg p-4">

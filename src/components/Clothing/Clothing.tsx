@@ -68,7 +68,7 @@ const clothingProducts = [
 const Clothing = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold mb-6 text-center">
+      <h2 className="text-4xl font-extrabold text-center my-8 text-violet-600 animate-pulse drop-shadow-lg">
         Mother's Day Clothing{" "}
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -80,7 +80,9 @@ const Clothing = () => {
               className="w-full h-90 object-cover rounded-lg"
             />
             <div className="mt-4">
-              <h4 className="text-lg font-semibold text-gray-600">{product.name}</h4>
+              <h4 className="text-lg font-semibold text-gray-600">
+                {product.name}
+              </h4>
               <p className="text-gray-600">{product.price}</p>
             </div>
           </div>
