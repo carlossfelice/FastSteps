@@ -21,7 +21,7 @@ const FilterSection = ({
   onFilterChange,
 }: FilterSectionProps) => {
   return (
-    <div className="mb-6 border rounded-lg p-4 shadow-md"> {/* Añadido borde y sombra */}
+    <div className="mb-6 border rounded-lg p-4 shadow-md"> 
       <div className="fixed">
         <CoverParticules />
       </div>
